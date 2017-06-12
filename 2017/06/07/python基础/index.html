@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Misaka-NO10032.github.io">
-  <title>UIResponder相关 | Misaka&#39;s Blog</title>
+  <title>Python(2.7.10)基础 | Misaka&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="UIResponder类是专门用来响应用户的操作处理各种事件的，包括触摸事件(Touch Events)、运动事件(Motion Events)、远程控制事件(Remote Control Events,如插入耳机调节音量触发的事件)。UIApplication、UIView、UIViewController这几个类是直接继承自UIResponder,所以这些类都可以响应事件。123456789">
-<meta name="keywords" content="iOS">
+  <meta name="description" content="Python注意事项：1.Python区分大小写，2.Python代码有缩进规则.具有相同缩进的代码被视为代码块.Python的习惯写法：4个空格，不要使用Tab，更不要混合Tab和空格，否则很容易造成因为缩进引起的语法错误。3.注释用”#”4.变量名：大小写英文，数字，下划线，数字不能开头">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UIResponder相关">
-<meta property="og:url" content="https://Misaka-NO10032.github.io/2017/03/10/UIResponder/index.html">
+<meta property="og:title" content="Python(2.7.10)基础">
+<meta property="og:url" content="https://Misaka-NO10032.github.io/2017/06/07/python基础/index.html">
 <meta property="og:site_name" content="Misaka&#39;s Blog">
-<meta property="og:description" content="UIResponder类是专门用来响应用户的操作处理各种事件的，包括触摸事件(Touch Events)、运动事件(Motion Events)、远程控制事件(Remote Control Events,如插入耳机调节音量触发的事件)。UIApplication、UIView、UIViewController这几个类是直接继承自UIResponder,所以这些类都可以响应事件。123456789">
-<meta property="og:updated_time" content="2017-03-14T02:05:07.000Z">
+<meta property="og:description" content="Python注意事项：1.Python区分大小写，2.Python代码有缩进规则.具有相同缩进的代码被视为代码块.Python的习惯写法：4个空格，不要使用Tab，更不要混合Tab和空格，否则很容易造成因为缩进引起的语法错误。3.注释用”#”4.变量名：大小写英文，数字，下划线，数字不能开头">
+<meta property="og:updated_time" content="2017-06-08T01:51:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UIResponder相关">
-<meta name="twitter:description" content="UIResponder类是专门用来响应用户的操作处理各种事件的，包括触摸事件(Touch Events)、运动事件(Motion Events)、远程控制事件(Remote Control Events,如插入耳机调节音量触发的事件)。UIApplication、UIView、UIViewController这几个类是直接继承自UIResponder,所以这些类都可以响应事件。123456789">
+<meta name="twitter:title" content="Python(2.7.10)基础">
+<meta name="twitter:description" content="Python注意事项：1.Python区分大小写，2.Python代码有缩进规则.具有相同缩进的代码被视为代码块.Python的习惯写法：4个空格，不要使用Tab，更不要混合Tab和空格，否则很容易造成因为缩进引起的语法错误。3.注释用”#”4.变量名：大小写英文，数字，下划线，数字不能开头">
   
   
     <link rel="icon" href="/favicon.png">
@@ -146,20 +146,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="[post]-UIResponder" class="article article-type-[post] " itemscope itemprop="blogPost">
+            <article id="[post]-python基础" class="article article-type-[post] " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      UIResponder相关
+      Python(2.7.10)基础
     </h1>
   
 
         
-        <a href="/2017/03/10/UIResponder/" class="archive-article-date">
-  	<time datetime="2017-03-10T02:48:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
+        <a href="/2017/06/07/python基础/" class="archive-article-date">
+  	<time datetime="2017-06-07T01:03:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-07</time>
 </a>
         
       </header>
@@ -167,34 +167,38 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>UIResponder类是专门用来响应用户的操作处理各种事件的，包括触摸事件(Touch Events)、运动事件(Motion Events)、远程控制事件(Remote Control Events,如插入耳机调节音量触发的事件)。<br>UIApplication、UIView、UIViewController这几个类是直接继承自UIResponder,所以这些类都可以响应事件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//下一个接收事件的响应者</div><div class="line">@property(nonatomic, readonly, nullable) UIResponder *nextResponder;</div><div class="line">- (nullable UIResponder*)nextResponder;</div><div class="line">//是否成为第一响应者</div><div class="line">@property(nonatomic, readonly) BOOL canBecomeFirstResponder;//default is NO</div><div class="line">- (BOOL)canBecomeFirstResponder;//default is NO</div><div class="line">- (BOOL)becomeFirstResponder;</div><div class="line">//是否能取消第一响应者</div><div class="line">@property(nonatomic, readonly) BOOL canResignFirstResponder;//default is YES</div><div class="line">- (BOOL)canResignFirstResponder;//default is YES</div><div class="line">- (BOOL)resignFirstResponder;</div><div class="line">//是否是第一响应者</div><div class="line">@property(nonatomic, readonly) BOOL isFirstResponder;</div><div class="line">- (BOOL)isFirstResponder;</div></pre></td></tr></table></figure><a id="more"></a></p>
-<hr>
 <ul>
-<li>触摸事件(Touch Events)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//触摸开始</div><div class="line">- (void)touchesBegan:(NSSet&lt;UITouch *&gt; *)touches withEvent:(nullable UIEvent *)event;</div><div class="line">//触摸移动</div><div class="line">- (void)touchesMoved:(NSSet&lt;UITouch *&gt; *)touches withEvent:(nullable UIEvent *)event;</div><div class="line"> //触摸结束</div><div class="line">- (void)touchesEnded:(NSSet&lt;UITouch *&gt; *)touches withEvent:(nullable UIEvent *)event;</div><div class="line">//触摸中断</div><div class="line">- (void)touchesCancelled:(NSSet&lt;UITouch *&gt; *)touches withEvent:(nullable UIEvent *)event;</div><div class="line">//3D触摸</div><div class="line">- (void)touchesEstimatedPropertiesUpdated:(NSSet&lt;UITouch *&gt; *)touches NS_AVAILABLE_IOS(9_1);</div></pre></td></tr></table></figure>
+<li>Python注意事项：<br>1.Python区分大小写，<br>2.Python代码有缩进规则.具有相同缩进的代码被视为代码块.Python的习惯写法：4个空格，不要使用Tab，更不要混合Tab和空格，否则很容易造成因为缩进引起的语法错误。<br>3.注释用”#”<br>4.变量名：大小写英文，数字，下划线，数字不能开头<a id="more"></a>
 </li>
 </ul>
 <hr>
 <ul>
-<li>运动事件(Motion Events)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//运动开始</div><div class="line">- (void)motionBegan:(UIEventSubtype)motion withEvent:(nullable UIEvent *)event NS_AVAILABLE_IOS(3_0);</div><div class="line">//运动结束</div><div class="line">- (void)motionEnded:(UIEventSubtype)motion withEvent:(nullable UIEvent *)event NS_AVAILABLE_IOS(3_0);</div><div class="line">//运动中断</div><div class="line">- (void)motionCancelled:(UIEventSubtype)motion withEvent:(nullable UIEvent *)event NS_AVAILABLE_IOS(3_0);</div></pre></td></tr></table></figure>
+<li>Python数据类型<br>1.布尔值：Ture、False<br>2.逻辑运算符：and(与)、or(或)、not(非)<br>3.空：None<br>4.list<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">list是数学意义上的有序集合，也就是说，list中的元素是按照顺序排列的。</div><div class="line">由于Python是动态语言，所以list中包含的元素并不要求都必须是同一种数据类型，我们完全可以在list中包含各种数据</div><div class="line">L = [0,&apos;aaaa&apos;,True]</div><div class="line">索引从 0 开始，也就是说，第一个元素的索引是0，第二个元素的索引是1，以此类推。</div><div class="line">因此，要打印第一个，用 L[0]:</div><div class="line">&gt;&gt;&gt; print L[0]</div><div class="line">我们可以用 -1 这个索引来表示最后一个元素，类似的，倒数第二用 -2 表示，倒数第三用 -3 表示，倒数第四用 -4 表示</div><div class="line">&gt;&gt;&gt; print L[-1]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">添加新元素</div><div class="line">第一个办法是用 list 的 append() 方法，把新元素追加到 list 的末尾</div><div class="line">另一个方法是用list的 insert()方法，它接受两个参数，第一个参数是索引号，第二个参数是待添加的新元素</div><div class="line">删除元素</div><div class="line">如果元素排在最后一个，我们可以用list的pop()方法删除，若不是最后一个，可在（）内传入索引值来删除</div><div class="line">Python中替换元素,通过索引值直接赋值替换</div></pre></td></tr></table></figure>
+5.tuple<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">tuple是另一种有序的列表，中文翻译为“ 元组 ”。tuple 和 list 非常类似，但是，tuple一旦创建完毕，就不能修改了。</div><div class="line">t = (0,&apos;aaaa&apos;,False)</div><div class="line">因为()既可以表示tuple，又可以作为括号表示运算时的优先级，结果 (1) 被Python解释器计算出结果 1，导致我们得到的不是tuple，而是整数 1。所以 Python 规定，单元素 tuple 要多加一个逗号“,”，这样就避免了歧义</div><div class="line">t = (1,)</div><div class="line">tuple是不可变的，但是，如果tuple里面有list元素，那么list元素可以改变。所以，tuple所谓的“不变”是说，tuple的每个元素，指向永远不变。即指向&apos;a&apos;，就不能改成指向&apos;b&apos;，指向一个list，就不能改成指向其他对象，但指向的这个list本身是可变的！</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">对list和tuple进行切片</div><div class="line">L[0:3]表示，从索引0开始取，直到索引3为止，但不包括索引3。即索引0，1，2，正好是3个元素。</div><div class="line">如果第一个索引是0，还可以省略：</div><div class="line">&gt;&gt;&gt; L[:3]</div><div class="line">只用一个 : ，表示从头到尾：</div><div class="line">&gt;&gt;&gt; L[:]</div><div class="line">因此，L[:]实际上复制出了一个新list或tuple</div><div class="line">切片操作还可以指定第三个参数：</div><div class="line">&gt;&gt;&gt; L[::2]</div><div class="line">第三个参数表示每N个取一个，上面的 L[::2] 会每两个元素取出一个来，也就是隔一个取一个。</div><div class="line">既然Python支持L[-1]取倒数第一个元素，那么它同样支持倒数切片</div><div class="line">L[-2:]</div><div class="line">L[:-2]</div><div class="line">L[-4:-1:2]</div><div class="line">字符串 &apos;xxx&apos;和 Unicode字符串 u&apos;xxx&apos;也可以看成是一种list，每个元素就是一个字符。因此，字符串也可以用切片操作，只是操作结果仍是字符串：</div><div class="line">&gt;&gt;&gt; &apos;ABCDEFG&apos;[::2]</div><div class="line">&apos;ACEG&apos;</div></pre></td></tr></table></figure>
+6.dict<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">用 dict 表示“名字”-“成绩”的查找表如下：</div><div class="line">d = &#123;</div><div class="line">    &apos;Adam&apos;: 95,</div><div class="line">    &apos;Lisa&apos;: 85,</div><div class="line">    &apos;Bart&apos;: 59</div><div class="line">&#125;</div><div class="line">我们把名字称为key，对应的成绩称为value，dict就是通过 key 来查找 value。花括号 &#123;&#125; 表示这是一个dict，然后按照 key: value, 写出来即可。最后一个 key: value 的逗号可以省略。</div><div class="line">访问dict，可以简单地使用 d[key] 的形式来查找对应的 value</div><div class="line"></div><div class="line">注意: 通过 key 访问 dict 的value，只要 key 存在，dict就返回对应的value。如果key不存在，会直接报错：KeyError。</div><div class="line">要避免 KeyError 发生，有两个办法：</div><div class="line">一是先判断一下 key 是否存在，用 in 操作符：</div><div class="line">if &apos;Paul&apos; in d:</div><div class="line">    print d[&apos;Paul&apos;]</div><div class="line">如果 &apos;Paul&apos; 不存在，if语句判断为False，自然不会执行 print d[&apos;Paul&apos;] ，从而避免了错误。</div><div class="line">二是使用dict本身提供的一个 get 方法，在Key不存在的时候，返回None：</div><div class="line">&gt;&gt;&gt; print d.get(&apos;Bart&apos;)</div><div class="line">59</div><div class="line">&gt;&gt;&gt; print d.get(&apos;Paul&apos;)</div><div class="line">None</div></pre></td></tr></table></figure>
+dict中作为key的元素必须不可变，Python的基本类型如字符串、整数、浮点数都是不可变的，都可以作为 key。但是list是可变的，就不能作为 key。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">更新dict用赋值语句：</div><div class="line">&gt;&gt;&gt; d[&apos;Paul&apos;] = 72</div><div class="line">如果 key 已经存在，则赋值会用新的 value 替换掉原来的 value</div><div class="line">遍历dict，直接使用for循环可以遍历 dict 的 key：</div><div class="line">由于通过 key 可以获取对应的 value，因此，在循环体内，可以获取到value的值。</div></pre></td></tr></table></figure>
+7.set<br>set内部存储的元素是无序的,set会自动去掉重复的元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">创建 set 的方式是调用 set() 并传入一个 list，list的元素将作为set的元素：</div><div class="line">&gt;&gt;&gt; s = set([&apos;A&apos;, &apos;B&apos;, &apos;C&apos;])</div><div class="line">访问 set中的某个元素实际上就是判断一个元素是否在set中。</div><div class="line">我们可以用 in 操作符判断：</div><div class="line">Bart是该班的同学吗？</div><div class="line">&gt;&gt;&gt; &apos;Bart&apos; in s</div><div class="line">True</div><div class="line">Bill是该班的同学吗？</div><div class="line">&gt;&gt;&gt; &apos;Bill&apos; in s</div><div class="line">False</div></pre></td></tr></table></figure>
+set的内部结构和dict很像，唯一区别是不存储value，因此，判断一个元素是否在set中速度很快。<br>set存储的元素和dict的key类似，必须是不变对象，因此，任何可变对象是不能放入set中的。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">由于 set 也是一个集合，所以，遍历 set 和遍历 list 类似，都可以通过 for 循环实现。</div><div class="line">直接使用 for 循环可以遍历 set 的元素：</div><div class="line">添加元素时，用set的add()方法：如果添加的元素已经存在于set中，add()不会报错，但是不会加进去了</div><div class="line">删除set中的元素时，用set的remove()方法：如果删除的元素不存在set中，remove()会报错</div><div class="line">如果删除的元素不存在set中，remove()会报错</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <hr>
 <ul>
-<li>远程控制事件(Remote Control Events）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//远程控制</div><div class="line">- (void)remoteControlReceivedWithEvent:(nullable UIEvent *)event NS_AVAILABLE_IOS(4_0);</div></pre></td></tr></table></figure>
+<li>if、for、while<br>循环过程中，可以用break退出当前循环，还可以用continue跳过本次循环后续代码，继续下一次循环。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; a = 5</div><div class="line">&gt;&gt;&gt; if a &gt;= 3:</div><div class="line">...     print &apos;yes&apos;</div><div class="line">...     print a</div><div class="line">... elif a &gt;= 6:</div><div class="line">...     print &apos;&gt;=6&apos;</div><div class="line">... else:</div><div class="line">...     print &apos;&lt;3&apos;</div><div class="line">...</div><div class="line">yes</div><div class="line">5</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for x in [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]:</div><div class="line">    for y in [&apos;1&apos;, &apos;2&apos;, &apos;3&apos;]:</div><div class="line">        print x + y</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">N = 10</div><div class="line">x = 0</div><div class="line">while x &lt; N:</div><div class="line">    print x</div><div class="line">    x = x + 1</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <hr>
-<ul>
-<li>UITouch<br>当用户用手指触摸屏幕时，系统会为每根手指创建一个与之关联的UITouch对象<br>UITouch保存着跟手指相关的信息，比如触摸的位置、时间、阶段；当手指移动时，系统会更新与之相对应的UITouch对象，使之能够一直保存该手指即时的触摸位置<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- (CGPoint)locationInView:(UIView *)view;</div><div class="line">函数返回触摸点相对view这个视图的位置，这里返回的位置是针对view的坐标系的。调用时传入的view参数为空的话，返回的时触摸点在整个窗口的位置</div><div class="line">- (CGPoint)previousLocationInView:(UIView *)view;</div><div class="line">该方法返回了前一个触摸点相对view的值</div></pre></td></tr></table></figure>
-UITouch属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//触摸所在的窗口</div><div class="line">@property (nonatomic, readonly, retain) UIWindow *window;</div><div class="line">//触摸所在的view</div><div class="line">@property (nonatomic, readonly, retain) UIView *view;</div><div class="line">//短时间内点击屏幕的次数，可根据tapCount判断单击、双击或更多点击</div><div class="line">@property (nonatomic, readonly,) NSUInteger tapCount;</div><div class="line">//记录了触摸事件产生或变化时的时间，单位 （秒）</div><div class="line">@property (nonatomic, readonly) NSTimeInterval timestamp;</div><div class="line">//当前触摸事件所处的状态</div><div class="line">@property (nonatomic, readonly) UITouchPhase phase;</div></pre></td></tr></table></figure>
-</li>
-</ul>
+<p>函数<br>在Python中，定义一个函数要使用 def 语句，依次写出函数名、括号、括号中的参数和冒号:，然后，在缩进块中编写函数体，函数的返回值用 return 语句返回。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">def power(x, n=2):</div><div class="line">    s = 1</div><div class="line">    while n &gt; 0:</div><div class="line">        n = n - 1</div><div class="line">        s = s * x</div><div class="line">    return s,n</div><div class="line">函数可以有默认参数，可以返回多个值</div><div class="line">在语法上，返回一个tuple可以省略括号，而多个变量可以同时接收一个tuple，按位置赋给对应的值，所以，Python的函数返回多值其实就是返回一个tuple，但写起来更方便</div><div class="line"></div><div class="line">如果想让一个函数能接受任意个参数，我们就可以定义一个可变参数：</div><div class="line">def fn(*args):</div><div class="line">    print args</div><div class="line">可变参数的名字前面有个 * 号，我们可以传入0个、1个或多个参数给可变参数，Python解释器会把传入的一组参数组装成一个tuple传递给可变参数，因此，在函数内部，直接把变量 args 看成一个 tuple 就好了。</div></pre></td></tr></table></figure></p>
 <hr>
 <ul>
-<li>UIEvent<br>UIEvent：称为事件对象，记录事件产生的时刻和类型.每产生一个事件，就会产生一个UIEvent对象<br>常见属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//事件类型</div><div class="line">@property(nonatomic, readonly) UIEventType  type;</div><div class="line">@property(nonatomic, readonly) UIEventSubtype  subtype;</div><div class="line">//事件产生的时间</div><div class="line">@property(nonatomic, readonly) NSTimeInterval  timestamp;</div></pre></td></tr></table></figure>
-UIEvent还提供相应的方法可以获得在某个view上面的触摸对象（UITouch）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- (NSSet *)allTouches；//获得全部UITouch</div><div class="line">-  (NSSet *)touchesForView:(UIView *)view;//获取view上的UITouch</div></pre></td></tr></table></figure>
-</li>
+<li>print<br>print可以通过”,”或”+”一次输出多个值，区别在于：<br>“,”作间隔输出时不同值之间会有一个空格出现，可以输出不同的数据类型<br>“+”作间隔输出时不同值会连在一起，只能输出同数据类型<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; print &quot;python&quot;,&quot;print&quot;</div><div class="line">python print</div><div class="line"></div><div class="line">&gt;&gt;&gt; print &quot;python&quot;+&quot;print&quot;</div><div class="line">pythonprint</div><div class="line"></div><div class="line">&gt;&gt;&gt; print &quot;python&quot;,3</div><div class="line">python 3</div><div class="line"></div><div class="line">&gt;&gt;&gt; print &quot;python&quot;+3</div><div class="line">Traceback (most recent call last):</div><div class="line">  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</div><div class="line">TypeError: cannot concatenate &apos;str&apos; and &apos;int&apos; objects</div></pre></td></tr></table></figure>
+r’…’和r’’’…’’’<br>如果一个字符串包含很多需要转义的字符，对每一个字符都进行转义会很麻烦。为了避免这种情况，我们可以在字符串前面加个前缀 r ，表示这是一个 raw 字符串，里面的字符就不需要转义了。<br>r’…’输出单行字符串,如果要表示多行字符串，可以用’’’…’’’表示<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; print &quot;\\\\&quot;</div><div class="line">\\</div><div class="line">&gt;&gt;&gt; print r&quot;\\\\&quot;</div><div class="line">\\\\</div><div class="line">&gt;&gt;&gt; print r&apos;&apos;&apos;\\\\</div><div class="line">... qqqqq</div><div class="line">... aaaa&apos;&apos;&apos;</div><div class="line">\\\\</div><div class="line">qqqqq</div><div class="line">aaaa</div></pre></td></tr></table></figure>
+早期python不支持中文字符串编码，可以用u’…’和u’’’…’’’输出单行和多行</li>
 </ul>
+<p>如果中文字符串在Python环境下遇到 UnicodeDecodeError，这是因为.py文件保存的格式有问题。可以在第一行添加注释<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># -*- coding: utf-8 -*-</div></pre></td></tr></table></figure></p>
 
       
 
@@ -208,7 +212,7 @@ UIEvent还提供相应的方法可以获得在某个view上面的触摸对象（
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
@@ -264,7 +268,7 @@ UIEvent还提供相应的方法可以获得在某个view上面的触摸对象（
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://Misaka-NO10032.github.io/2017/03/10/UIResponder/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://Misaka-NO10032.github.io/2017/06/07/python基础/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -278,15 +282,20 @@ UIEvent还提供相应的方法可以获得在某个view上面的触摸对象（
   
 <nav id="article-nav">
   
-    <a href="/2017/03/10/UITableView/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/06/07/Python基础二/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          UITableView
+          Python(2.7.10)基础二
         
       </div>
     </a>
   
+  
+    <a href="/2017/05/17/多线程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">多线程</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

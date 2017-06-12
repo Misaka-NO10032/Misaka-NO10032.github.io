@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Misaka-NO10032.github.io">
-  <title>UIResponder相关 | Misaka&#39;s Blog</title>
+  <title>Python(2.7.10)基础二 | Misaka&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="UIResponder类是专门用来响应用户的操作处理各种事件的，包括触摸事件(Touch Events)、运动事件(Motion Events)、远程控制事件(Remote Control Events,如插入耳机调节音量触发的事件)。UIApplication、UIView、UIViewController这几个类是直接继承自UIResponder,所以这些类都可以响应事件。123456789">
-<meta name="keywords" content="iOS">
+  <meta name="description" content="迭代Python中，迭代永远是取出元素本身，而非元素的索引。">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UIResponder相关">
-<meta property="og:url" content="https://Misaka-NO10032.github.io/2017/03/10/UIResponder/index.html">
+<meta property="og:title" content="Python(2.7.10)基础二">
+<meta property="og:url" content="https://Misaka-NO10032.github.io/2017/06/07/Python基础二/index.html">
 <meta property="og:site_name" content="Misaka&#39;s Blog">
-<meta property="og:description" content="UIResponder类是专门用来响应用户的操作处理各种事件的，包括触摸事件(Touch Events)、运动事件(Motion Events)、远程控制事件(Remote Control Events,如插入耳机调节音量触发的事件)。UIApplication、UIView、UIViewController这几个类是直接继承自UIResponder,所以这些类都可以响应事件。123456789">
-<meta property="og:updated_time" content="2017-03-14T02:05:07.000Z">
+<meta property="og:description" content="迭代Python中，迭代永远是取出元素本身，而非元素的索引。">
+<meta property="og:updated_time" content="2017-06-07T08:21:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UIResponder相关">
-<meta name="twitter:description" content="UIResponder类是专门用来响应用户的操作处理各种事件的，包括触摸事件(Touch Events)、运动事件(Motion Events)、远程控制事件(Remote Control Events,如插入耳机调节音量触发的事件)。UIApplication、UIView、UIViewController这几个类是直接继承自UIResponder,所以这些类都可以响应事件。123456789">
+<meta name="twitter:title" content="Python(2.7.10)基础二">
+<meta name="twitter:description" content="迭代Python中，迭代永远是取出元素本身，而非元素的索引。">
   
   
     <link rel="icon" href="/favicon.png">
@@ -146,20 +146,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="[post]-UIResponder" class="article article-type-[post] " itemscope itemprop="blogPost">
+            <article id="[post]-Python基础二" class="article article-type-[post] " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      UIResponder相关
+      Python(2.7.10)基础二
     </h1>
   
 
         
-        <a href="/2017/03/10/UIResponder/" class="archive-article-date">
-  	<time datetime="2017-03-10T02:48:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
+        <a href="/2017/06/07/Python基础二/" class="archive-article-date">
+  	<time datetime="2017-06-07T04:05:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-07</time>
 </a>
         
       </header>
@@ -167,33 +167,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>UIResponder类是专门用来响应用户的操作处理各种事件的，包括触摸事件(Touch Events)、运动事件(Motion Events)、远程控制事件(Remote Control Events,如插入耳机调节音量触发的事件)。<br>UIApplication、UIView、UIViewController这几个类是直接继承自UIResponder,所以这些类都可以响应事件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//下一个接收事件的响应者</div><div class="line">@property(nonatomic, readonly, nullable) UIResponder *nextResponder;</div><div class="line">- (nullable UIResponder*)nextResponder;</div><div class="line">//是否成为第一响应者</div><div class="line">@property(nonatomic, readonly) BOOL canBecomeFirstResponder;//default is NO</div><div class="line">- (BOOL)canBecomeFirstResponder;//default is NO</div><div class="line">- (BOOL)becomeFirstResponder;</div><div class="line">//是否能取消第一响应者</div><div class="line">@property(nonatomic, readonly) BOOL canResignFirstResponder;//default is YES</div><div class="line">- (BOOL)canResignFirstResponder;//default is YES</div><div class="line">- (BOOL)resignFirstResponder;</div><div class="line">//是否是第一响应者</div><div class="line">@property(nonatomic, readonly) BOOL isFirstResponder;</div><div class="line">- (BOOL)isFirstResponder;</div></pre></td></tr></table></figure><a id="more"></a></p>
-<hr>
 <ul>
-<li>触摸事件(Touch Events)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//触摸开始</div><div class="line">- (void)touchesBegan:(NSSet&lt;UITouch *&gt; *)touches withEvent:(nullable UIEvent *)event;</div><div class="line">//触摸移动</div><div class="line">- (void)touchesMoved:(NSSet&lt;UITouch *&gt; *)touches withEvent:(nullable UIEvent *)event;</div><div class="line"> //触摸结束</div><div class="line">- (void)touchesEnded:(NSSet&lt;UITouch *&gt; *)touches withEvent:(nullable UIEvent *)event;</div><div class="line">//触摸中断</div><div class="line">- (void)touchesCancelled:(NSSet&lt;UITouch *&gt; *)touches withEvent:(nullable UIEvent *)event;</div><div class="line">//3D触摸</div><div class="line">- (void)touchesEstimatedPropertiesUpdated:(NSSet&lt;UITouch *&gt; *)touches NS_AVAILABLE_IOS(9_1);</div></pre></td></tr></table></figure>
+<li>迭代<br>Python中，迭代永远是取出元素本身，而非元素的索引。<a id="more"></a><br>1.对于有序集合，元素确实是有索引的。我们使用 enumerate() 函数可以取到索引；<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; L = [&apos;Adam&apos;, &apos;Lisa&apos;, &apos;Bart&apos;, &apos;Paul&apos;]</div><div class="line">&gt;&gt;&gt; for index, name in enumerate(L):</div><div class="line">...     print index, &apos;-&apos;, name</div><div class="line">... </div><div class="line">0 - Adam</div><div class="line">1 - Lisa</div><div class="line">2 - Bart</div><div class="line">3 - Paul</div><div class="line"></div><div class="line">实际上，enumerate() 函数把：[&apos;Adam&apos;, &apos;Lisa&apos;, &apos;Bart&apos;, &apos;Paul&apos;]变成了类似：</div><div class="line">[(0, &apos;Adam&apos;), (1, &apos;Lisa&apos;), (2, &apos;Bart&apos;), (3, &apos;Paul&apos;)]</div><div class="line"></div><div class="line">因此，迭代的每一个元素实际上是一个tuple：</div><div class="line">for t in enumerate(L):</div><div class="line">    index = t[0]</div><div class="line">    name = t[1]</div><div class="line">    print index, &apos;-&apos;, name</div><div class="line"></div><div class="line">如果我们知道每个tuple元素都包含两个元素，for循环又可以进一步简写为：</div><div class="line">for index, name in enumerate(L):</div><div class="line">    print index, &apos;-&apos;, name</div><div class="line">这样不但代码更简单，而且还少了两条赋值语句。</div><div class="line">可见，索引迭代也不是真的按索引访问，而是由 enumerate() 函数自动把每个元素变成 (index, element) 这样的tuple，再迭代，就同时获得了索引和元素本身。</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<p>2.迭代dict的value<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; d = &#123; &apos;Adam&apos;: 95, &apos;Lisa&apos;: 85, &apos;Bart&apos;: 59 &#125;</div><div class="line">&gt;&gt;&gt; print d.values()</div><div class="line">[85, 95, 59]</div></pre></td></tr></table></figure></p>
+<p>3.迭代dict的key和value<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; d = &#123; &apos;Adam&apos;: 95, &apos;Lisa&apos;: 85, &apos;Bart&apos;: 59 &#125;</div><div class="line">&gt;&gt;&gt; for key, value in d.items():</div><div class="line">...     print key, &apos;:&apos;, value</div><div class="line">... </div><div class="line">Lisa : 85</div><div class="line">Adam : 95</div><div class="line">Bart : 59</div></pre></td></tr></table></figure></p>
 <hr>
 <ul>
-<li>运动事件(Motion Events)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//运动开始</div><div class="line">- (void)motionBegan:(UIEventSubtype)motion withEvent:(nullable UIEvent *)event NS_AVAILABLE_IOS(3_0);</div><div class="line">//运动结束</div><div class="line">- (void)motionEnded:(UIEventSubtype)motion withEvent:(nullable UIEvent *)event NS_AVAILABLE_IOS(3_0);</div><div class="line">//运动中断</div><div class="line">- (void)motionCancelled:(UIEventSubtype)motion withEvent:(nullable UIEvent *)event NS_AVAILABLE_IOS(3_0);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<ul>
-<li>远程控制事件(Remote Control Events）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//远程控制</div><div class="line">- (void)remoteControlReceivedWithEvent:(nullable UIEvent *)event NS_AVAILABLE_IOS(4_0);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<ul>
-<li>UITouch<br>当用户用手指触摸屏幕时，系统会为每根手指创建一个与之关联的UITouch对象<br>UITouch保存着跟手指相关的信息，比如触摸的位置、时间、阶段；当手指移动时，系统会更新与之相对应的UITouch对象，使之能够一直保存该手指即时的触摸位置<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- (CGPoint)locationInView:(UIView *)view;</div><div class="line">函数返回触摸点相对view这个视图的位置，这里返回的位置是针对view的坐标系的。调用时传入的view参数为空的话，返回的时触摸点在整个窗口的位置</div><div class="line">- (CGPoint)previousLocationInView:(UIView *)view;</div><div class="line">该方法返回了前一个触摸点相对view的值</div></pre></td></tr></table></figure>
-UITouch属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//触摸所在的窗口</div><div class="line">@property (nonatomic, readonly, retain) UIWindow *window;</div><div class="line">//触摸所在的view</div><div class="line">@property (nonatomic, readonly, retain) UIView *view;</div><div class="line">//短时间内点击屏幕的次数，可根据tapCount判断单击、双击或更多点击</div><div class="line">@property (nonatomic, readonly,) NSUInteger tapCount;</div><div class="line">//记录了触摸事件产生或变化时的时间，单位 （秒）</div><div class="line">@property (nonatomic, readonly) NSTimeInterval timestamp;</div><div class="line">//当前触摸事件所处的状态</div><div class="line">@property (nonatomic, readonly) UITouchPhase phase;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<ul>
-<li>UIEvent<br>UIEvent：称为事件对象，记录事件产生的时刻和类型.每产生一个事件，就会产生一个UIEvent对象<br>常见属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//事件类型</div><div class="line">@property(nonatomic, readonly) UIEventType  type;</div><div class="line">@property(nonatomic, readonly) UIEventSubtype  subtype;</div><div class="line">//事件产生的时间</div><div class="line">@property(nonatomic, readonly) NSTimeInterval  timestamp;</div></pre></td></tr></table></figure>
-UIEvent还提供相应的方法可以获得在某个view上面的触摸对象（UITouch）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- (NSSet *)allTouches；//获得全部UITouch</div><div class="line">-  (NSSet *)touchesForView:(UIView *)view;//获取view上的UITouch</div></pre></td></tr></table></figure>
-</li>
+<li>生成list<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">请利用列表生成式生成列表 [1x2, 3x4, 5x6, 7x8, ..., 99x100]</div><div class="line"> print [x*(x+1) for x in range(1,101,2)]</div><div class="line"> 如果我们只想要偶数的平方，不改动 range()的情况下，可以加上 if 来筛选：</div><div class="line">&gt;&gt;&gt; [x * x for x in range(1, 11) if x % 2 == 0]</div><div class="line">[4, 16, 36, 64, 100]</div><div class="line">多层表达式</div><div class="line">利用 3 层for循环的列表生成式，找出对称的 3 位数。例如，121 就是对称数，因为从右到左倒过来还是 121。</div><div class="line">print [x*100+y*10+z for x in range(1,10) for y in range(0,10) for z in range(1,10) if x == z]</div></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -208,7 +190,7 @@ UIEvent还提供相应的方法可以获得在某个view上面的触摸对象（
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
@@ -264,7 +246,7 @@ UIEvent还提供相应的方法可以获得在某个view上面的触摸对象（
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://Misaka-NO10032.github.io/2017/03/10/UIResponder/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://Misaka-NO10032.github.io/2017/06/07/Python基础二/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -278,15 +260,20 @@ UIEvent还提供相应的方法可以获得在某个view上面的触摸对象（
   
 <nav id="article-nav">
   
-    <a href="/2017/03/10/UITableView/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/06/07/Python进阶/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          UITableView
+          Python(2.7.10)进阶
         
       </div>
     </a>
   
+  
+    <a href="/2017/06/07/python基础/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python(2.7.10)基础</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

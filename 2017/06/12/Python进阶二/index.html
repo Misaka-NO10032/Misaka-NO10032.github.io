@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Misaka-NO10032.github.io">
-  <title>UIResponder相关 | Misaka&#39;s Blog</title>
+  <title>Python(2.7.10)进阶二 | Misaka&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="UIResponder类是专门用来响应用户的操作处理各种事件的，包括触摸事件(Touch Events)、运动事件(Motion Events)、远程控制事件(Remote Control Events,如插入耳机调节音量触发的事件)。UIApplication、UIView、UIViewController这几个类是直接继承自UIResponder,所以这些类都可以响应事件。123456789">
-<meta name="keywords" content="iOS">
+  <meta name="description" content="模块导入要使用一个模块，我们必须首先导入该模块。Python使用import语句导入一个模块。12345678例如，导入系统自带的模块 math：import math你可以认为math就是一个指向已导入模块的变量，通过该变量，我们可以访问math模块中所定义的所有公开的函数、变量和类：&amp;gt;&amp;gt;&amp;gt; math.pow(2, 0.5) # pow是函数1.41421356237309">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UIResponder相关">
-<meta property="og:url" content="https://Misaka-NO10032.github.io/2017/03/10/UIResponder/index.html">
+<meta property="og:title" content="Python(2.7.10)进阶二">
+<meta property="og:url" content="https://Misaka-NO10032.github.io/2017/06/12/Python进阶二/index.html">
 <meta property="og:site_name" content="Misaka&#39;s Blog">
-<meta property="og:description" content="UIResponder类是专门用来响应用户的操作处理各种事件的，包括触摸事件(Touch Events)、运动事件(Motion Events)、远程控制事件(Remote Control Events,如插入耳机调节音量触发的事件)。UIApplication、UIView、UIViewController这几个类是直接继承自UIResponder,所以这些类都可以响应事件。123456789">
-<meta property="og:updated_time" content="2017-03-14T02:05:07.000Z">
+<meta property="og:description" content="模块导入要使用一个模块，我们必须首先导入该模块。Python使用import语句导入一个模块。12345678例如，导入系统自带的模块 math：import math你可以认为math就是一个指向已导入模块的变量，通过该变量，我们可以访问math模块中所定义的所有公开的函数、变量和类：&amp;gt;&amp;gt;&amp;gt; math.pow(2, 0.5) # pow是函数1.41421356237309">
+<meta property="og:updated_time" content="2017-06-12T06:20:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UIResponder相关">
-<meta name="twitter:description" content="UIResponder类是专门用来响应用户的操作处理各种事件的，包括触摸事件(Touch Events)、运动事件(Motion Events)、远程控制事件(Remote Control Events,如插入耳机调节音量触发的事件)。UIApplication、UIView、UIViewController这几个类是直接继承自UIResponder,所以这些类都可以响应事件。123456789">
+<meta name="twitter:title" content="Python(2.7.10)进阶二">
+<meta name="twitter:description" content="模块导入要使用一个模块，我们必须首先导入该模块。Python使用import语句导入一个模块。12345678例如，导入系统自带的模块 math：import math你可以认为math就是一个指向已导入模块的变量，通过该变量，我们可以访问math模块中所定义的所有公开的函数、变量和类：&amp;gt;&amp;gt;&amp;gt; math.pow(2, 0.5) # pow是函数1.41421356237309">
   
   
     <link rel="icon" href="/favicon.png">
@@ -146,20 +146,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="[post]-UIResponder" class="article article-type-[post] " itemscope itemprop="blogPost">
+            <article id="[post]-Python进阶二" class="article article-type-[post] " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      UIResponder相关
+      Python(2.7.10)进阶二
     </h1>
   
 
         
-        <a href="/2017/03/10/UIResponder/" class="archive-article-date">
-  	<time datetime="2017-03-10T02:48:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
+        <a href="/2017/06/12/Python进阶二/" class="archive-article-date">
+  	<time datetime="2017-06-12T05:42:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-12</time>
 </a>
         
       </header>
@@ -167,34 +167,17 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>UIResponder类是专门用来响应用户的操作处理各种事件的，包括触摸事件(Touch Events)、运动事件(Motion Events)、远程控制事件(Remote Control Events,如插入耳机调节音量触发的事件)。<br>UIApplication、UIView、UIViewController这几个类是直接继承自UIResponder,所以这些类都可以响应事件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//下一个接收事件的响应者</div><div class="line">@property(nonatomic, readonly, nullable) UIResponder *nextResponder;</div><div class="line">- (nullable UIResponder*)nextResponder;</div><div class="line">//是否成为第一响应者</div><div class="line">@property(nonatomic, readonly) BOOL canBecomeFirstResponder;//default is NO</div><div class="line">- (BOOL)canBecomeFirstResponder;//default is NO</div><div class="line">- (BOOL)becomeFirstResponder;</div><div class="line">//是否能取消第一响应者</div><div class="line">@property(nonatomic, readonly) BOOL canResignFirstResponder;//default is YES</div><div class="line">- (BOOL)canResignFirstResponder;//default is YES</div><div class="line">- (BOOL)resignFirstResponder;</div><div class="line">//是否是第一响应者</div><div class="line">@property(nonatomic, readonly) BOOL isFirstResponder;</div><div class="line">- (BOOL)isFirstResponder;</div></pre></td></tr></table></figure><a id="more"></a></p>
-<hr>
 <ul>
-<li>触摸事件(Touch Events)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//触摸开始</div><div class="line">- (void)touchesBegan:(NSSet&lt;UITouch *&gt; *)touches withEvent:(nullable UIEvent *)event;</div><div class="line">//触摸移动</div><div class="line">- (void)touchesMoved:(NSSet&lt;UITouch *&gt; *)touches withEvent:(nullable UIEvent *)event;</div><div class="line"> //触摸结束</div><div class="line">- (void)touchesEnded:(NSSet&lt;UITouch *&gt; *)touches withEvent:(nullable UIEvent *)event;</div><div class="line">//触摸中断</div><div class="line">- (void)touchesCancelled:(NSSet&lt;UITouch *&gt; *)touches withEvent:(nullable UIEvent *)event;</div><div class="line">//3D触摸</div><div class="line">- (void)touchesEstimatedPropertiesUpdated:(NSSet&lt;UITouch *&gt; *)touches NS_AVAILABLE_IOS(9_1);</div></pre></td></tr></table></figure>
+<li>模块导入<br>要使用一个模块，我们必须首先导入该模块。Python使用import语句导入一个模块。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">例如，导入系统自带的模块 math：</div><div class="line">import math</div><div class="line">你可以认为math就是一个指向已导入模块的变量，通过该变量，我们可以访问math模块中所定义的所有公开的函数、变量和类：</div><div class="line">&gt;&gt;&gt; math.pow(2, 0.5) # pow是函数</div><div class="line">1.4142135623730951</div><div class="line"></div><div class="line">&gt;&gt;&gt; math.pi # pi是变量</div><div class="line">3.141592653589793</div></pre></td></tr></table></figure><a id="more"></a>
+如果我们只希望导入用到的math模块的某几个函数，而不是所有函数，可以用下面的语句：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">from math import pow, sin, log</div><div class="line">这样，可以直接引用 pow, sin, log 这3个函数，但math的其他函数没有导入进来：</div><div class="line">&gt;&gt;&gt; pow(2, 10)</div><div class="line">1024.0</div><div class="line">&gt;&gt;&gt; sin(3.14)</div><div class="line">0.0015926529164868282</div></pre></td></tr></table></figure>
+如果遇到名字冲突怎么办？比如math模块有一个log函数，logging模块也有一个log函数，如果同时使用，如何解决名字冲突？<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">如果使用import导入模块名，由于必须通过模块名引用函数名，因此不存在冲突：</div><div class="line"></div><div class="line">import math, logging</div><div class="line">print math.log(10)   # 调用的是math的log函数</div><div class="line">logging.log(10, &apos;something&apos;)   # 调用的是logging的log函数</div><div class="line"></div><div class="line">如果使用 from...import 导入 log 函数，势必引起冲突。这时，可以给函数起个“别名”来避免冲突：</div><div class="line"></div><div class="line">from math import log</div><div class="line">from logging import log as logger   # logging的log现在变成了logger</div><div class="line">print log(10)   # 调用的是math的log</div><div class="line">logger(10, &apos;import from logging&apos;)   # 调用的是logging的log</div></pre></td></tr></table></figure></li>
+<li>动态导入模块<br>如果导入的模块不存在，Python解释器会报 ImportError 错误：<br>有的时候，两个不同的模块提供了相同的功能，比如 StringIO 和 cStringIO 都提供了StringIO这个功能。<br>这是因为Python是动态语言，解释执行，因此Python代码运行速度慢。<br>如果要提高Python代码的运行速度，最简单的方法是把某些关键函数用 C 语言重写，这样就能大大提高执行速度。<br>同样的功能，StringIO 是纯Python代码编写的，而 cStringIO 部分函数是 C 写的，因此 cStringIO 运行速度更快。<br>利用ImportError错误，我们经常在Python中动态导入模块：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">try:</div><div class="line">    from cStringIO import StringIO</div><div class="line">except ImportError:</div><div class="line">    from StringIO import StringIO</div><div class="line">上述代码先尝试从cStringIO导入，如果失败了（比如cStringIO没有被安装），再尝试从StringIO导入。这样，如果cStringIO模块存在，则我们将获得更快的运行速度，如果cStringIO不存在，则顶多代码运行速度会变慢，但不会影响代码的正常执行。</div><div class="line"></div><div class="line">try 的作用是捕获错误，并在捕获到指定错误时执行 except 语句。</div></pre></td></tr></table></figure>
+利用import … as …，还可以动态导入不同名称的模块。</li>
+<li>添加第三方模块<br>pip install<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pip install web.py #添加web模块</div><div class="line">查找第三方模块：https://pypi.python.org/</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <hr>
-<ul>
-<li>运动事件(Motion Events)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//运动开始</div><div class="line">- (void)motionBegan:(UIEventSubtype)motion withEvent:(nullable UIEvent *)event NS_AVAILABLE_IOS(3_0);</div><div class="line">//运动结束</div><div class="line">- (void)motionEnded:(UIEventSubtype)motion withEvent:(nullable UIEvent *)event NS_AVAILABLE_IOS(3_0);</div><div class="line">//运动中断</div><div class="line">- (void)motionCancelled:(UIEventSubtype)motion withEvent:(nullable UIEvent *)event NS_AVAILABLE_IOS(3_0);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<ul>
-<li>远程控制事件(Remote Control Events）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//远程控制</div><div class="line">- (void)remoteControlReceivedWithEvent:(nullable UIEvent *)event NS_AVAILABLE_IOS(4_0);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<ul>
-<li>UITouch<br>当用户用手指触摸屏幕时，系统会为每根手指创建一个与之关联的UITouch对象<br>UITouch保存着跟手指相关的信息，比如触摸的位置、时间、阶段；当手指移动时，系统会更新与之相对应的UITouch对象，使之能够一直保存该手指即时的触摸位置<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- (CGPoint)locationInView:(UIView *)view;</div><div class="line">函数返回触摸点相对view这个视图的位置，这里返回的位置是针对view的坐标系的。调用时传入的view参数为空的话，返回的时触摸点在整个窗口的位置</div><div class="line">- (CGPoint)previousLocationInView:(UIView *)view;</div><div class="line">该方法返回了前一个触摸点相对view的值</div></pre></td></tr></table></figure>
-UITouch属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//触摸所在的窗口</div><div class="line">@property (nonatomic, readonly, retain) UIWindow *window;</div><div class="line">//触摸所在的view</div><div class="line">@property (nonatomic, readonly, retain) UIView *view;</div><div class="line">//短时间内点击屏幕的次数，可根据tapCount判断单击、双击或更多点击</div><div class="line">@property (nonatomic, readonly,) NSUInteger tapCount;</div><div class="line">//记录了触摸事件产生或变化时的时间，单位 （秒）</div><div class="line">@property (nonatomic, readonly) NSTimeInterval timestamp;</div><div class="line">//当前触摸事件所处的状态</div><div class="line">@property (nonatomic, readonly) UITouchPhase phase;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<ul>
-<li>UIEvent<br>UIEvent：称为事件对象，记录事件产生的时刻和类型.每产生一个事件，就会产生一个UIEvent对象<br>常见属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//事件类型</div><div class="line">@property(nonatomic, readonly) UIEventType  type;</div><div class="line">@property(nonatomic, readonly) UIEventSubtype  subtype;</div><div class="line">//事件产生的时间</div><div class="line">@property(nonatomic, readonly) NSTimeInterval  timestamp;</div></pre></td></tr></table></figure>
-UIEvent还提供相应的方法可以获得在某个view上面的触摸对象（UITouch）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- (NSSet *)allTouches；//获得全部UITouch</div><div class="line">-  (NSSet *)touchesForView:(UIView *)view;//获取view上的UITouch</div></pre></td></tr></table></figure>
-</li>
-</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">__future__</div><div class="line">Python的新版本会引入新的功能，但是，实际上这些功能在上一个老版本中就已经存在了。要“试用”某一新的特性，就可以通过导入__future__模块的某些功能来实现。</div><div class="line">例如，Python 2.7的整数除法运算结果仍是整数：</div><div class="line">&gt;&gt;&gt; 10 / 3</div><div class="line">3</div><div class="line"></div><div class="line">但是，Python 3.x已经改进了整数的除法运算，“/”除将得到浮点数，“//”除才仍是整数：</div><div class="line">&gt;&gt;&gt; 10 / 3</div><div class="line">3.3333333333333335</div><div class="line">&gt;&gt;&gt; 10 // 3</div><div class="line">3</div><div class="line"></div><div class="line">要在Python 2.7中引入3.x的除法规则，导入__future__的division：</div><div class="line">&gt;&gt;&gt; from __future__ import division</div><div class="line">&gt;&gt;&gt; print 10 / 3</div><div class="line">3.3333333333333335</div></pre></td></tr></table></figure>
 
       
 
@@ -208,7 +191,7 @@ UIEvent还提供相应的方法可以获得在某个view上面的触摸对象（
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
@@ -264,7 +247,7 @@ UIEvent还提供相应的方法可以获得在某个view上面的触摸对象（
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://Misaka-NO10032.github.io/2017/03/10/UIResponder/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://Misaka-NO10032.github.io/2017/06/12/Python进阶二/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -278,15 +261,20 @@ UIEvent还提供相应的方法可以获得在某个view上面的触摸对象（
   
 <nav id="article-nav">
   
-    <a href="/2017/03/10/UITableView/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/06/12/Python定义类/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          UITableView
+          Python定义类
         
       </div>
     </a>
   
+  
+    <a href="/2017/06/07/Python进阶/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python(2.7.10)进阶</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Misaka-NO10032.github.io">
-  <title>UIResponder相关 | Misaka&#39;s Blog</title>
+  <title>Python(2.7.10)进阶 | Misaka&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="UIResponder类是专门用来响应用户的操作处理各种事件的，包括触摸事件(Touch Events)、运动事件(Motion Events)、远程控制事件(Remote Control Events,如插入耳机调节音量触发的事件)。UIApplication、UIView、UIViewController这几个类是直接继承自UIResponder,所以这些类都可以响应事件。123456789">
-<meta name="keywords" content="iOS">
+  <meta name="description" content="python函数可以把函数作为参数12345&amp;gt;&amp;gt;&amp;gt; def add(x, y, f):...     return f(x)+f(y)...&amp;gt;&amp;gt;&amp;gt; add(-5, 9, abs)14">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UIResponder相关">
-<meta property="og:url" content="https://Misaka-NO10032.github.io/2017/03/10/UIResponder/index.html">
+<meta property="og:title" content="Python(2.7.10)进阶">
+<meta property="og:url" content="https://Misaka-NO10032.github.io/2017/06/07/Python进阶/index.html">
 <meta property="og:site_name" content="Misaka&#39;s Blog">
-<meta property="og:description" content="UIResponder类是专门用来响应用户的操作处理各种事件的，包括触摸事件(Touch Events)、运动事件(Motion Events)、远程控制事件(Remote Control Events,如插入耳机调节音量触发的事件)。UIApplication、UIView、UIViewController这几个类是直接继承自UIResponder,所以这些类都可以响应事件。123456789">
-<meta property="og:updated_time" content="2017-03-14T02:05:07.000Z">
+<meta property="og:description" content="python函数可以把函数作为参数12345&amp;gt;&amp;gt;&amp;gt; def add(x, y, f):...     return f(x)+f(y)...&amp;gt;&amp;gt;&amp;gt; add(-5, 9, abs)14">
+<meta property="og:updated_time" content="2017-06-12T05:53:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UIResponder相关">
-<meta name="twitter:description" content="UIResponder类是专门用来响应用户的操作处理各种事件的，包括触摸事件(Touch Events)、运动事件(Motion Events)、远程控制事件(Remote Control Events,如插入耳机调节音量触发的事件)。UIApplication、UIView、UIViewController这几个类是直接继承自UIResponder,所以这些类都可以响应事件。123456789">
+<meta name="twitter:title" content="Python(2.7.10)进阶">
+<meta name="twitter:description" content="python函数可以把函数作为参数12345&amp;gt;&amp;gt;&amp;gt; def add(x, y, f):...     return f(x)+f(y)...&amp;gt;&amp;gt;&amp;gt; add(-5, 9, abs)14">
   
   
     <link rel="icon" href="/favicon.png">
@@ -146,20 +146,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="[post]-UIResponder" class="article article-type-[post] " itemscope itemprop="blogPost">
+            <article id="[post]-Python进阶" class="article article-type-[post] " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      UIResponder相关
+      Python(2.7.10)进阶
     </h1>
   
 
         
-        <a href="/2017/03/10/UIResponder/" class="archive-article-date">
-  	<time datetime="2017-03-10T02:48:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
+        <a href="/2017/06/07/Python进阶/" class="archive-article-date">
+  	<time datetime="2017-06-07T08:29:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-07</time>
 </a>
         
       </header>
@@ -167,34 +167,23 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>UIResponder类是专门用来响应用户的操作处理各种事件的，包括触摸事件(Touch Events)、运动事件(Motion Events)、远程控制事件(Remote Control Events,如插入耳机调节音量触发的事件)。<br>UIApplication、UIView、UIViewController这几个类是直接继承自UIResponder,所以这些类都可以响应事件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//下一个接收事件的响应者</div><div class="line">@property(nonatomic, readonly, nullable) UIResponder *nextResponder;</div><div class="line">- (nullable UIResponder*)nextResponder;</div><div class="line">//是否成为第一响应者</div><div class="line">@property(nonatomic, readonly) BOOL canBecomeFirstResponder;//default is NO</div><div class="line">- (BOOL)canBecomeFirstResponder;//default is NO</div><div class="line">- (BOOL)becomeFirstResponder;</div><div class="line">//是否能取消第一响应者</div><div class="line">@property(nonatomic, readonly) BOOL canResignFirstResponder;//default is YES</div><div class="line">- (BOOL)canResignFirstResponder;//default is YES</div><div class="line">- (BOOL)resignFirstResponder;</div><div class="line">//是否是第一响应者</div><div class="line">@property(nonatomic, readonly) BOOL isFirstResponder;</div><div class="line">- (BOOL)isFirstResponder;</div></pre></td></tr></table></figure><a id="more"></a></p>
-<hr>
 <ul>
-<li>触摸事件(Touch Events)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//触摸开始</div><div class="line">- (void)touchesBegan:(NSSet&lt;UITouch *&gt; *)touches withEvent:(nullable UIEvent *)event;</div><div class="line">//触摸移动</div><div class="line">- (void)touchesMoved:(NSSet&lt;UITouch *&gt; *)touches withEvent:(nullable UIEvent *)event;</div><div class="line"> //触摸结束</div><div class="line">- (void)touchesEnded:(NSSet&lt;UITouch *&gt; *)touches withEvent:(nullable UIEvent *)event;</div><div class="line">//触摸中断</div><div class="line">- (void)touchesCancelled:(NSSet&lt;UITouch *&gt; *)touches withEvent:(nullable UIEvent *)event;</div><div class="line">//3D触摸</div><div class="line">- (void)touchesEstimatedPropertiesUpdated:(NSSet&lt;UITouch *&gt; *)touches NS_AVAILABLE_IOS(9_1);</div></pre></td></tr></table></figure>
+<li>python函数<br>可以把函数作为参数<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; def add(x, y, f):</div><div class="line">...     return f(x)+f(y)</div><div class="line">...</div><div class="line">&gt;&gt;&gt; add(-5, 9, abs)</div><div class="line">14</div></pre></td></tr></table></figure><a id="more"></a>
+函数返回值可以为函数<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; def f():</div><div class="line">...     def g(x):</div><div class="line">...         return x*x</div><div class="line">...     return g</div><div class="line">...</div><div class="line">&gt;&gt;&gt; fn = f()</div><div class="line">&gt;&gt;&gt; print fn(3)</div><div class="line">9</div></pre></td></tr></table></figure>
+闭包<br>内层函数引用了外层函数的变量（参数也算变量），然后返回内层函数的情况，称为闭包（Closure）。闭包的特点是返回的函数还引用了外层函数的局部变量，所以，要正确使用闭包，就要确保引用的局部变量在函数返回后不能变。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; # 希望一次返回3个函数，分别计算1x1,2x2,3x3:</div><div class="line">... def count():</div><div class="line">...     fs = []</div><div class="line">...     for i in range(1, 4):</div><div class="line">...         def f(i):</div><div class="line">...             return i*i</div><div class="line">...         fs.append(f)</div><div class="line">...     return fs</div><div class="line">...</div><div class="line">&gt;&gt;&gt; f1, f2, f3 = count()</div><div class="line">&gt;&gt;&gt; print f1(),f2(),f3()</div><div class="line">9 9 9</div><div class="line"></div><div class="line">&gt;&gt;&gt; # 希望一次返回3个函数，分别计算1x1,2x2,3x3:</div><div class="line">... def count():</div><div class="line">...     fs = []</div><div class="line">...     for i in range(1, 4):</div><div class="line">...         def f(n = i):</div><div class="line">...             return n*n</div><div class="line">...         fs.append(f)</div><div class="line">...     return fs</div><div class="line">...</div><div class="line">&gt;&gt;&gt; f1, f2, f3 = count()</div><div class="line">&gt;&gt;&gt; print f1(),f2(),f3()</div><div class="line">1 4 9</div><div class="line"></div><div class="line">对比上面两个函数可知：python函数定义时仅走声明部分，只有当真正调用函数时才会走函数的实现部分</div></pre></td></tr></table></figure>
+匿名函数<br>关键字lambda 表示匿名函数，冒号前面的表示函数参数，后面表达式为结果。匿名函数有个限制，就是只能有一个表达式，不写return，返回值就是该表达式的结果。<br>使用匿名函数，可以不必定义函数名，直接创建一个函数对象，很多时候可以简化代码<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; map(lambda x: x * x, [1, 2, 3, 4, 5, 6, 7, 8, 9])</div><div class="line">[1, 4, 9, 16, 25, 36, 49, 64, 81]</div><div class="line">可以看出，匿名函数 lambda x: x * x 实际上就是：</div><div class="line">def f(x):</div><div class="line">    return x * x</div></pre></td></tr></table></figure>
+装饰器(decorator)<br>Python的 decorator 本质上就是一个高阶函数，它接收一个函数作为参数，然后，返回一个新函数。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">无参decorator</div><div class="line">def fn(f):</div><div class="line">	def s(x):</div><div class="line">		r = f(x)</div><div class="line">		print &apos;!&apos;</div><div class="line">		return r</div><div class="line">	return s</div><div class="line">@fn</div><div class="line">def g(x):</div><div class="line">	return x</div><div class="line">print g(5)</div><div class="line">&gt;&gt;</div><div class="line">!</div><div class="line">5</div><div class="line"></div><div class="line"></div><div class="line">有参无参有参无参decorator</div><div class="line">import time</div><div class="line">def performance(unit):</div><div class="line">    def returnfunction(f):</div><div class="line">        def decoratorfuntion(*args,**kw):</div><div class="line">            t1 = time.time()</div><div class="line">            # *args,**kw可传入任意数量参数</div><div class="line">            r = f(*args,**kw)</div><div class="line">            t2 = time.time()</div><div class="line">            t = t2-t1</div><div class="line">            if unit == &apos;ms&apos;:</div><div class="line">                t = t*1000</div><div class="line">            print &apos;call %s() in %f%s&apos;%(f.__name__,t,unit)</div><div class="line">            return r</div><div class="line">        return decoratorfuntion</div><div class="line">    return returnfunction</div><div class="line"></div><div class="line">@performance(&apos;ms&apos;)</div><div class="line">def factorial(n):</div><div class="line">    return reduce(lambda x,y: x*y, range(1, n+1))</div><div class="line">print factorial(10)</div><div class="line">&gt;&gt;</div><div class="line">call factorial() in 14.061928ms</div><div class="line">3628800</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">完善decorator</div><div class="line">有decorator的情况下，打印函数名：</div><div class="line">def log(f):</div><div class="line">    def wrapper(*args, **kw):</div><div class="line">        print &apos;call...&apos;</div><div class="line">        return f(*args, **kw)</div><div class="line">    return wrapper</div><div class="line">@log</div><div class="line">def f2(x):</div><div class="line">    pass</div><div class="line">print f2.__name__</div><div class="line">&gt;&gt;</div><div class="line">wrapper</div><div class="line">可见，由于decorator返回的新函数函数名已经不是&apos;f2&apos;，而是@log内部定义的&apos;wrapper&apos;。这对于那些依赖函数名的代码就会失效.这对于那些依赖函数名的代码就会失效。decorator还改变了函数的__doc__等其它属性。如果要让调用者看不出一个函数经过了@decorator的“改造”，就需要把原函数的一些属性复制到新函数中：</div><div class="line"></div><div class="line">def log(f):</div><div class="line">    def wrapper(*args, **kw):</div><div class="line">        print &apos;call...&apos;</div><div class="line">        return f(*args, **kw)</div><div class="line">    wrapper.__name__ = f.__name__</div><div class="line">    wrapper.__doc__ = f.__doc__</div><div class="line">    return wrapper</div><div class="line"></div><div class="line">这样写decorator很不方便，因为我们也很难把原函数的所有必要属性都一个一个复制到新函数上，所以Python内置的functools可以用来自动化完成这个“复制”的任务：</div><div class="line"></div><div class="line">import functools</div><div class="line">def log(f):</div><div class="line">    @functools.wraps(f)</div><div class="line">    def wrapper(*args, **kw):</div><div class="line">        print &apos;call...&apos;</div><div class="line">        return f(*args, **kw)</div><div class="line">    return wrapper</div><div class="line"></div><div class="line">最后需要指出，由于我们把原函数签名改成了(*args, **kw)，因此，无法获得原函数的原始参数信息。即便我们采用固定参数来装饰只有一个参数的函数：</div><div class="line"></div><div class="line">def log(f):</div><div class="line">    @functools.wraps(f)</div><div class="line">    def wrapper(x):</div><div class="line">        print &apos;call...&apos;</div><div class="line">        return f(x)</div><div class="line">    return wrapper</div><div class="line"></div><div class="line">也可能改变原函数的参数名，因为新函数的参数名始终是 &apos;x&apos;，原函数定义的参数名不一定叫 &apos;x&apos;。</div><div class="line"></div><div class="line"></div><div class="line">@functools.wraps(f)加在def wrapper(*args, **kw):前面</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <hr>
 <ul>
-<li>运动事件(Motion Events)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//运动开始</div><div class="line">- (void)motionBegan:(UIEventSubtype)motion withEvent:(nullable UIEvent *)event NS_AVAILABLE_IOS(3_0);</div><div class="line">//运动结束</div><div class="line">- (void)motionEnded:(UIEventSubtype)motion withEvent:(nullable UIEvent *)event NS_AVAILABLE_IOS(3_0);</div><div class="line">//运动中断</div><div class="line">- (void)motionCancelled:(UIEventSubtype)motion withEvent:(nullable UIEvent *)event NS_AVAILABLE_IOS(3_0);</div></pre></td></tr></table></figure>
+<li>Python内置高阶函数<br>1.map():接收一个函数 f 和一个 list，并通过把函数 f 依次作用在 list 的每个元素上，得到一个新的 list 并返回。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">假设用户输入的英文名字不规范，没有按照首字母大写，后续字母小写的规则，请利用map()函数，把一个list（包含若干不规范的英文名字）变成一个包含规范英文名字的list：</div><div class="line">&gt;&gt;&gt; def format_name(s):</div><div class="line">...     return s[0].upper()+s[1:].lower()</div><div class="line">...</div><div class="line">&gt;&gt;&gt; print map(format_name, [&apos;adam&apos;, &apos;LISA&apos;, &apos;barT&apos;])</div><div class="line">[&apos;Adam&apos;, &apos;Lisa&apos;, &apos;Bart&apos;]</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<hr>
-<ul>
-<li>远程控制事件(Remote Control Events）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//远程控制</div><div class="line">- (void)remoteControlReceivedWithEvent:(nullable UIEvent *)event NS_AVAILABLE_IOS(4_0);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<ul>
-<li>UITouch<br>当用户用手指触摸屏幕时，系统会为每根手指创建一个与之关联的UITouch对象<br>UITouch保存着跟手指相关的信息，比如触摸的位置、时间、阶段；当手指移动时，系统会更新与之相对应的UITouch对象，使之能够一直保存该手指即时的触摸位置<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- (CGPoint)locationInView:(UIView *)view;</div><div class="line">函数返回触摸点相对view这个视图的位置，这里返回的位置是针对view的坐标系的。调用时传入的view参数为空的话，返回的时触摸点在整个窗口的位置</div><div class="line">- (CGPoint)previousLocationInView:(UIView *)view;</div><div class="line">该方法返回了前一个触摸点相对view的值</div></pre></td></tr></table></figure>
-UITouch属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//触摸所在的窗口</div><div class="line">@property (nonatomic, readonly, retain) UIWindow *window;</div><div class="line">//触摸所在的view</div><div class="line">@property (nonatomic, readonly, retain) UIView *view;</div><div class="line">//短时间内点击屏幕的次数，可根据tapCount判断单击、双击或更多点击</div><div class="line">@property (nonatomic, readonly,) NSUInteger tapCount;</div><div class="line">//记录了触摸事件产生或变化时的时间，单位 （秒）</div><div class="line">@property (nonatomic, readonly) NSTimeInterval timestamp;</div><div class="line">//当前触摸事件所处的状态</div><div class="line">@property (nonatomic, readonly) UITouchPhase phase;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<ul>
-<li>UIEvent<br>UIEvent：称为事件对象，记录事件产生的时刻和类型.每产生一个事件，就会产生一个UIEvent对象<br>常见属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//事件类型</div><div class="line">@property(nonatomic, readonly) UIEventType  type;</div><div class="line">@property(nonatomic, readonly) UIEventSubtype  subtype;</div><div class="line">//事件产生的时间</div><div class="line">@property(nonatomic, readonly) NSTimeInterval  timestamp;</div></pre></td></tr></table></figure>
-UIEvent还提供相应的方法可以获得在某个view上面的触摸对象（UITouch）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- (NSSet *)allTouches；//获得全部UITouch</div><div class="line">-  (NSSet *)touchesForView:(UIView *)view;//获取view上的UITouch</div></pre></td></tr></table></figure>
-</li>
-</ul>
+<p>2.reduce():接收一个函数 f (f 必须接收两个参数)，一个list,还可以接收第3个可选参数，作为计算的初始值。reduce()对list的每个元素反复调用函数f，并返回最终结果值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; def f(x,y):</div><div class="line">...     return x*y</div><div class="line">...</div><div class="line">&gt;&gt;&gt; print reduce(f,[1,2,3])</div><div class="line">6</div><div class="line">&gt;&gt;&gt; print reduce(f,[1,2,3],2)</div><div class="line">12</div></pre></td></tr></table></figure></p>
+<p>3.filter():接收一个函数 f 和一个list,这个函数 f 的作用是对每个元素进行判断，返回 True或 False，filter()根据判断结果自动过滤掉不符合条件的元素，返回由符合条件元素组成的新list。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">例如，要从一个list [1, 4, 6, 7, 9, 12, 17]中删除偶数，保留奇数，首先，要编写一个判断奇数的函数：</div><div class="line">&gt;&gt;&gt; def f(x):</div><div class="line">...     return x%2 == 1</div><div class="line">...</div><div class="line">&gt;&gt;&gt; filter(f,[1,2,3,4,5,6,7,8])</div><div class="line">[1, 3, 5, 7]</div></pre></td></tr></table></figure></p>
+<p>4.sorted():接收一个list和一个函数 f ,以f的排序规则返回一个重新排序的list，默认f为从小到大排序。<br>比较函数f的定义是，传入两个待比较的元素 x, y.如果 x 应该排在 y 的前面，返回 -1，如果 x 应该排在 y 的后面，返回 1。如果 x 和 y 相等，返回 0。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; def f(x,y):</div><div class="line">...     if x &gt; y:</div><div class="line">...         return -1</div><div class="line">...     elif x &lt; y:</div><div class="line">...         return 1</div><div class="line">...     else:</div><div class="line">...         return 0</div><div class="line">...</div><div class="line">&gt;&gt;&gt; sorted([1,5,3,8,10],f)</div><div class="line">[10, 8, 5, 3, 1]</div><div class="line">&gt;&gt;&gt; sorted([1,5,3,8,10])</div><div class="line">[1, 3, 5, 8, 10]</div></pre></td></tr></table></figure><br>5.functools.partial<br>偏函数可以把一个参数多的函数变成一个参数少的新函数，少的参数需要在创建时指定默认值，这样，新函数调用的难度就降低了。偏函数第一个参数为函数f，后面的参数为f的参数的赋值表达式。<br>注意：使用偏函数必须保证偏函数至少有一个必须赋值的参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">import functools</div><div class="line"></div><div class="line">def f(x,y,z):</div><div class="line">	return x,y,z</div><div class="line">g = functools.partial(f,y = 1,z = 1)</div><div class="line">print f(1,2,3)</div><div class="line">&gt;&gt;</div><div class="line">(1, 2, 3)</div><div class="line"></div><div class="line">print g(1)</div><div class="line">&gt;&gt;</div><div class="line">(1, 1, 1)</div></pre></td></tr></table></figure></p>
 
       
 
@@ -208,7 +197,7 @@ UIEvent还提供相应的方法可以获得在某个view上面的触摸对象（
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
@@ -264,7 +253,7 @@ UIEvent还提供相应的方法可以获得在某个view上面的触摸对象（
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://Misaka-NO10032.github.io/2017/03/10/UIResponder/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://Misaka-NO10032.github.io/2017/06/07/Python进阶/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -278,15 +267,20 @@ UIEvent还提供相应的方法可以获得在某个view上面的触摸对象（
   
 <nav id="article-nav">
   
-    <a href="/2017/03/10/UITableView/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/06/12/Python进阶二/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          UITableView
+          Python(2.7.10)进阶二
         
       </div>
     </a>
   
+  
+    <a href="/2017/06/07/Python基础二/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python(2.7.10)基础二</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
