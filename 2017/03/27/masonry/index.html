@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://Misaka-NO10032.github.io">
   <title>masonry | Misaka&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="把masonry框架载入工程后，请把以下两句宏定义写到头文件内，以便省略该框架语句的“mas_”前缀12#define MAS_SHORTHAND#define MAS_SHORTHAND_GLOBALS约束关系123.equalTo : = (对应NSLayoutRelationEqual)  .lessThanOrEqualTo : &amp;lt;=  (对应NSLayoutRelationLes">
+  <meta name="description" content="把masonry框架载入工程后，请把以下两句宏定义写到头文件内，以便省略该框架语句的“mas_”前缀1234#define MAS_SHORTHAND#define MAS_SHORTHAND_GLOBALS//两句宏一定要在import前面#import &amp;lt;Masonry.h&amp;gt;">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="masonry">
 <meta property="og:url" content="https://Misaka-NO10032.github.io/2017/03/27/masonry/index.html">
 <meta property="og:site_name" content="Misaka&#39;s Blog">
-<meta property="og:description" content="把masonry框架载入工程后，请把以下两句宏定义写到头文件内，以便省略该框架语句的“mas_”前缀12#define MAS_SHORTHAND#define MAS_SHORTHAND_GLOBALS约束关系123.equalTo : = (对应NSLayoutRelationEqual)  .lessThanOrEqualTo : &amp;lt;=  (对应NSLayoutRelationLes">
-<meta property="og:updated_time" content="2017-03-27T06:27:57.000Z">
+<meta property="og:description" content="把masonry框架载入工程后，请把以下两句宏定义写到头文件内，以便省略该框架语句的“mas_”前缀1234#define MAS_SHORTHAND#define MAS_SHORTHAND_GLOBALS//两句宏一定要在import前面#import &amp;lt;Masonry.h&amp;gt;">
+<meta property="og:updated_time" content="2017-06-15T02:02:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="masonry">
-<meta name="twitter:description" content="把masonry框架载入工程后，请把以下两句宏定义写到头文件内，以便省略该框架语句的“mas_”前缀12#define MAS_SHORTHAND#define MAS_SHORTHAND_GLOBALS约束关系123.equalTo : = (对应NSLayoutRelationEqual)  .lessThanOrEqualTo : &amp;lt;=  (对应NSLayoutRelationLes">
+<meta name="twitter:description" content="把masonry框架载入工程后，请把以下两句宏定义写到头文件内，以便省略该框架语句的“mas_”前缀1234#define MAS_SHORTHAND#define MAS_SHORTHAND_GLOBALS//两句宏一定要在import前面#import &amp;lt;Masonry.h&amp;gt;">
   
   
     <link rel="icon" href="/favicon.png">
@@ -167,7 +167,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>把masonry框架载入工程后，请把以下两句宏定义写到头文件内，以便省略该框架语句的“mas_”前缀<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#define MAS_SHORTHAND</div><div class="line">#define MAS_SHORTHAND_GLOBALS</div></pre></td></tr></table></figure><br>约束关系<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.equalTo : = (对应NSLayoutRelationEqual)  </div><div class="line">.lessThanOrEqualTo : &lt;=  (对应NSLayoutRelationLessThanOrEqual) </div><div class="line">.greaterThanOrEqualTo : &gt;= (对应NSLayoutRelationGreaterThanOrEqual) </div></pre></td></tr></table></figure></p>
+<p>把masonry框架载入工程后，请把以下两句宏定义写到头文件内，以便省略该框架语句的“mas_”前缀<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#define MAS_SHORTHAND</div><div class="line">#define MAS_SHORTHAND_GLOBALS</div><div class="line">//两句宏一定要在import前面</div><div class="line">#import &lt;Masonry.h&gt;</div></pre></td></tr></table></figure><a id="more"></a></p>
+<hr>
+<p>约束关系<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.equalTo : = (对应NSLayoutRelationEqual)  </div><div class="line">.lessThanOrEqualTo : &lt;=  (对应NSLayoutRelationLessThanOrEqual) </div><div class="line">.greaterThanOrEqualTo : &gt;= (对应NSLayoutRelationGreaterThanOrEqual) </div></pre></td></tr></table></figure></p>
+<hr>
+<p>基本设置属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">1.尺寸：width、height、size</div><div class="line">2.边界：left、leading、right、trailing、top、bottom</div><div class="line">3.中心点：center、centerX、centerY</div><div class="line">4.边界：edges</div><div class="line">5.偏移量：offset、insets、sizeOffset、centerOffset</div><div class="line">6.priority()约束优先级（0~1000），multipler乘因数, dividedBy除因数</div></pre></td></tr></table></figure></p>
+<hr>
+<p>使用方法<br>1.makeConstraints(添加约束)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[redView makeConstraints:^(MASConstraintMaker *make) &#123;</div><div class="line">        make.left.equalTo(10); //直接在equalTo()内填写数字，默认为相对于父视图而言，等同于下面注释的语句</div><div class="line">        //make.left.equalTo(self.view.left).offset(10); //offset()内填写偏差量</div><div class="line">        make.top.equalTo(50);</div><div class="line">        make.width.equalTo(self.view).dividedBy(2).offset(-15);//dividedBy()，除以某个量，用以实现按比例设置约束；multipliedBy()则是乘以某个量</div><div class="line">        make.height.equalTo(self.view).dividedBy(5);</div><div class="line">    &#125;];</div></pre></td></tr></table></figure><br>2.updateConstraints(更新约束、亦可添加新约束)<br>注意：当更新一个控件的约束的时候，与本控件相关的控件的约束也会随之改变<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[redView updateConstraints:^(MASConstraintMaker *make) &#123;</div><div class="line">        make.left.equalTo(20);</div><div class="line">    &#125;];</div></pre></td></tr></table></figure><br>3.remakeConstraints(重置之前的约束)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[yellowView remakeConstraints:^(MASConstraintMaker *make) &#123;</div><div class="line">        make.left.width.equalTo(blueView);</div><div class="line">        make.top.equalTo(blueView.bottom).offset(10);</div><div class="line">    &#125;];</div></pre></td></tr></table></figure></p>
+<hr>
+<p>AutoLayout关于更新的几个方法的区别：<br>    setNeedsLayout：告知页面需要更新，但是不会立刻开始更新。执行后会立刻调用layoutSubviews。<br>    layoutIfNeeded：告知页面布局立刻更新。所以一般都会和setNeedsLayout一起使用。如果希望立刻生成新的frame需要调用此方法，利用这点一般布局动画可以在更新布局后直接使用这个方法让动画生效。<br>    layoutSubviews：系统重写布局<br>    setNeedsUpdateConstraints：告知需要更新约束，但是不会立刻开始<br>    updateConstraintsIfNeeded：告知立刻更新约束<br>    updateConstraints：系统更新约束</p>
 
       
 
