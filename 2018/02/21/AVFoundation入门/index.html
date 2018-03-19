@@ -6,17 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Misaka-NO10032.github.io">
-  <title>Archives | Misaka&#39;s Blog</title>
+  <title>AVFoundation入门 | Misaka&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="倾尽所有，只求无悔!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Misaka&#39;s Blog">
-<meta property="og:url" content="https://Misaka-NO10032.github.io/archives/page/3/index.html">
+  <meta name="description" content="视频文件基础知识  FPS：视频的帧率，指视频文件一秒钟内所能展示的帧数。常见的帧率有24FPS、25FPS和30FPS。 视频有许多通用尺寸，常见的是16:9，即每16个水平像素对应9个垂直像素，在这一宽高比之下常见的视频尺寸是1280x720和1920x1080.如果每一个像素点使用8位的RGB色彩空间，就意味着红色占8位，绿色占8位，蓝色占8位，下表展示了未压缩视频在30FPS帧率的情况下，">
+<meta name="keywords" content="iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AVFoundation入门">
+<meta property="og:url" content="https://Misaka-NO10032.github.io/2018/02/21/AVFoundation入门/index.html">
 <meta property="og:site_name" content="Misaka&#39;s Blog">
-<meta property="og:description" content="倾尽所有，只求无悔!">
+<meta property="og:description" content="视频文件基础知识  FPS：视频的帧率，指视频文件一秒钟内所能展示的帧数。常见的帧率有24FPS、25FPS和30FPS。 视频有许多通用尺寸，常见的是16:9，即每16个水平像素对应9个垂直像素，在这一宽高比之下常见的视频尺寸是1280x720和1920x1080.如果每一个像素点使用8位的RGB色彩空间，就意味着红色占8位，绿色占8位，蓝色占8位，下表展示了未压缩视频在30FPS帧率的情况下，">
+<meta property="og:image" content="https://misaka-no10032.github.io/2018/02/21/AVFoundation入门/erciquyang.png">
+<meta property="og:image" content="https://misaka-no10032.github.io/2018/02/21/AVFoundation入门/tupisnzu.png">
+<meta property="og:updated_time" content="2018-02-22T01:37:58.116Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Misaka&#39;s Blog">
-<meta name="twitter:description" content="倾尽所有，只求无悔!">
+<meta name="twitter:title" content="AVFoundation入门">
+<meta name="twitter:description" content="视频文件基础知识  FPS：视频的帧率，指视频文件一秒钟内所能展示的帧数。常见的帧率有24FPS、25FPS和30FPS。 视频有许多通用尺寸，常见的是16:9，即每16个水平像素对应9个垂直像素，在这一宽高比之下常见的视频尺寸是1280x720和1920x1080.如果每一个像素点使用8位的RGB色彩空间，就意味着红色占8位，绿色占8位，蓝色占8位，下表展示了未压缩视频在30FPS帧率的情况下，">
+<meta name="twitter:image" content="https://misaka-no10032.github.io/2018/02/21/AVFoundation入门/erciquyang.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -144,36 +149,88 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="[post]-AVFoundation入门" class="article article-type-[post] " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      AVFoundation入门
+    </h1>
+  
+
+        
+        <a href="/2018/02/21/AVFoundation入门/" class="archive-article-date">
+  	<time datetime="2018-02-21T08:54:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-21</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>视频文件基础知识</strong></p>
+<ul>
+<li>FPS：视频的帧率，指视频文件一秒钟内所能展示的帧数。常见的帧率有24FPS、25FPS和30FPS。</li>
+<li>视频有许多通用尺寸，常见的是16:9，即每16个水平像素对应9个垂直像素，在这一宽高比之下常见的视频尺寸是1280x720和1920x1080.如果每一个像素点使用8位的RGB色彩空间，就意味着红色占8位，绿色占8位，蓝色占8位，下表展示了未压缩视频在30FPS帧率的情况下，需要的存储空间。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">颜色</th>
+<th style="text-align:center">分辨率</th>
+<th style="text-align:center">帧率</th>
+<th style="text-align:center">MB/s</th>
+<th style="text-align:center">GB/h</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">24位</td>
+<td style="text-align:center">1280x720</td>
+<td style="text-align:center">30FPS</td>
+<td style="text-align:center">79MB/s</td>
+<td style="text-align:center">278GB/h</td>
+</tr>
+<tr>
+<td style="text-align:center">24位</td>
+<td style="text-align:center">1920x1080</td>
+<td style="text-align:center">30FPS</td>
+<td style="text-align:center">178MB/s</td>
+<td style="text-align:center">625GB/h</td>
+</tr>
+</tbody>
+</table>
+<p>由此可见，在当前阶段未压缩的视频传输是不可取的，于是我们需要压缩技术。</p>
+<a id="more"></a>
+<hr>
+<p><strong>数字媒体压缩</strong></p>
+<ul>
+<li><strong>色彩二次抽样</strong><br>我们的眼睛对亮度的敏感度要高于颜色，所以我们可以将图片分离成亮度和色彩通道，再大幅度的减少存储在每个像素里的颜色信息，而不至于使图片的质量严重受损。这个减少颜色数据的过程就称为色彩二次抽样。<br>在摄像头规范和其他视频设备硬件或软件中提到的4:4:4、4:2:2以及4:2:0时，这些值就表示这些设备使用的色彩二次抽样的参数。格式写作J:a:b具体含义如下：<br>J：几个关联色块（一般为4个）中所包含的像素数<br>a：用来保存位于第一行中的每J个像素的色度像素个数<br>b：用来保存位于第二行中的每J个像素的附加像素个数<br>为了维持图片质量，每个像素点都需要有各自的亮度值，却不一定需要色度值。<br><img src="erciquyang.png" alt=""><br>在所有的格式下，每个像素的全部亮度信息都会被保存下来，在4:4:4的情况下全部的色彩信息也会被保存下来；在4:2:2的情况下，色彩信息为每两个水平像素的平均值，即亮度和色度比率为2:1；在4:2:0的情况下，色彩信息为水平和垂直两个方向的4个像素的平均值，亮度和色度的比率就是4:1.<br>色彩二次抽样一般发生在取样时，一些专业相机以4:4:4的参数捕捉图像，但大部分情况下对图片的拍摄是使用4:2:2的方式进行的。iPhone的摄像头通常是4:2:0进行拍摄的。<br>当以色彩作为核心或在生产后期校正颜色的时候，如果色彩方面出现了衰减，那会成为一个棘手的问题。由于我们的色彩信息是通过多个像素点平均得来的，噪声点和其他一些失真问题也会出现在图片上。</li>
+<li><strong> 编解码器压缩 </strong><br>大部分的音频和视频都是使用编解码器（codec）来压缩的，编解码器这个术语是由编码器/解码器结合简写得来的（encoder/decoder）。<br>编解码器既可以进行<strong>无损压缩</strong>也可以进行<strong>有损压缩</strong>。<br>无损压缩编解码器以一种可以完美重构的方式对媒体文件进行压缩，使其成为无论编辑还是发布都比较理想的文件，有时候也作为归档文件使用。例如zip和gzip压缩。<br>有损压缩编解码器在压缩过程中会有部分数据损失掉，但是有损压缩的目的是使用psycho-acoustic或psycho-visual模式作为一种方法来减少媒体内容中的冗余数据，这样会使原文件质量的损耗达到最小。</li>
+<li><strong>视频编解码器</strong><br>对视频编解码而言，AV Foundation提供有限的编解码器集合，具体到视频文件，主要可以归结为<strong>H.264</strong>和<strong>Apple ProRes</strong>。<br><strong>H.264</strong><br>H.264与其他MPEG压缩一样，通过<strong>空间</strong>和<strong>时间</strong>两个维度缩小视频文件的尺寸。</li>
+<li>空间：压缩独立视频帧，被称为<strong>帧内压缩</strong>。通过消除包含在每个独立视频帧的色彩及结构中冗余信息来进行压缩，因此可以在不降低图片质量的情况下尽可能缩小尺寸。这与JEPG压缩原理类似。帧内压缩也可以作为有损压缩算法，但通常用于对原始图片的一部分进行处理以生成极高质量的照片。通过这一过程创建的帧称为<strong>I-frames</strong>。</li>
+<li>时间：通过以组为单位的视频帧压缩冗余数据，称为<strong>帧间压缩</strong>。在帧间压缩中，很多帧被组合在一起作为一组图片（简称GOP），对于GOP所存在的时间维度的冗余可以被消除。如果想象视频文件中的典型场景，就会有一些特定运动元素的概念，比如行驶的汽车或街上走路的行人，场景的背景环境通常是固定的。固定的背景环境就代表一个时间维度上的冗余，这个冗余就可以通过压缩方式进行消除。下图给出了存储在GOP中的3个不同类型的帧。<br><img src="tupisnzu.png" alt=""></li>
+<li><strong>I-frames：</strong>这些帧都是一些单独的帧或关键帧，包含创建完整图片所需的所有数据。每个GOP都正好有一个I-frames。由于它是一个独立帧，其尺寸是最大的，但也是解压最快的。</li>
+<li><strong>P-frames：</strong>称为预测帧，是从基于最近I-frames或P-frames的可预测的图片进行编码得到的。P-frames可以引用最近的预测P-frames或一组I-frames。你将会经常看到这些被称为“reference frames”的帧，临近的P-frames和B-frames都可以对其进行引用。</li>
+<li><strong>B-frames：</strong>称为双向帧，是基于使用之前和之后的帧信息进行编码后得到的帧。几乎不需要存储空间，但其解压过程会耗费较长的时间，因为它依赖于周围其他的帧。<br><strong>Apple ProRes</strong><br>ProRes是有损编解码器，但它具有最高的编解码质量。ProRes编解码器只在OS X上可用。如果开发者只针对iOS进行开发，那只能使用H.264.</li>
+<li><strong>音频编解码器</strong><br><strong>AAC</strong><br>高级音频编码（AAC）是H.264标准相应的音频处理方式，目前已成为音频流和下载的音频资源中最主流的编码方式。<blockquote>
+<p>注意：AV Foundation提供MP3数据解码的支持，但是不支持对其进行编码。</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<p><strong>容器格式</strong><br>扩展名为.mov、.m4v、.mpg、.m4a等，我们通常将这些类型都认为是文件格式，但其正确定义应该是这些类型的都是文件的容器格式（container format）。容器格式是元文件格式，从更高的角度看，可以将容器格式视为包含一种或更多种媒体类型（以及描述其内容的元数据）的目录。比如QuickTime文件可以包含多种不同的媒体类型，包括视频、音频、字幕和章节信息等。<br>在AV Foundation的使用中常遇到的是<strong>QuickTime</strong>和<strong>MPEG-4</strong>。<strong>QuickTime</strong>是苹果公司在更宏观QuickTime架构中定义的最常用格式。具有非常高的可靠性并且是一种有着非常清晰定义的格式，被专业领域人士和普通消费者广泛使用。<strong>MPEG-4</strong>是从QuickTime规范中直接派生出来的一种行业标准格式，其容器格式的官方文件扩展名是.mp4。</p>
+<hr>
+<p><strong>文本转语音</strong><br>打印设备支持的语言类型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for (AVSpeechSynthesisVoice *voice in [AVSpeechSynthesisVoice speechVoices]) &#123;</div><div class="line">        NSLog(@&quot;---  Language: %@&quot;, voice.language);</div><div class="line">    &#125;</div></pre></td></tr></table></figure><br>文本转语音的Dome<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">//语句</div><div class="line">    AVSpeechUtterance *utterance = [[AVSpeechUtterance alloc] initWithString:@&quot;hello world!&quot;];</div><div class="line">    utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@&quot;zh-CN&quot;];//合成后的声音</div><div class="line">    utterance.rate = (AVSpeechUtteranceMinimumSpeechRate + AVSpeechUtteranceDefaultSpeechRate) / 2.0;//播放语音内容的速率</div><div class="line">    //    AVSpeechUtteranceMinimumSpeechRate最小速率 = 0.0</div><div class="line">    //    AVSpeechUtteranceMaximumSpeechRate最大速率 = 1.0</div><div class="line">    //    AVSpeechUtteranceDefaultSpeechRate默认速率</div><div class="line">    utterance.pitchMultiplier = 1.5f;//音调高低，一般介于0.5（低音调）和2.0（高音调）之间</div><div class="line">    utterance.postUtteranceDelay = 1.0f;//停顿，让语音合成器在播放下一语句之前有短时间的暂停</div><div class="line">    utterance.volume = 0.8;//音量</div><div class="line">//语音合成器</div><div class="line">    AVSpeechSynthesizer *synthesizer = [[AVSpeechSynthesizer alloc] init];</div><div class="line">    [synthesizer speakUtterance:utterance];</div></pre></td></tr></table></figure><br>AVSpeechSynthesizer起到队列的作用，提供了接口供控制和监控正在进行的语音播放。<br>AVSpeechUtterance负责具体的文本到语音的转换</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-[post]">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/14/UIView/" class="archive-article-date">
-  	<time datetime="2017-03-14T06:47:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/14/UIView/">UIView</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -185,365 +242,97 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://Misaka-NO10032.github.io/2018/02/21/AVFoundation入门/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-[post]">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/14/AVAudioPlayer/" class="archive-article-date">
-  	<time datetime="2017-03-14T06:26:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-14</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/14/AVAudioPlayer/">本地音乐播放</a>
-    </h1>
+    <a href="/2018/02/22/AVFoundation-播放和录制音频/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          AVFoundation-播放和录制音频
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/01/10/正则表达式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">正则表达式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-[post]">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/14/iOS碎片/" class="archive-article-date">
-  	<time datetime="2017-03-14T05:27:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/14/iOS碎片/">iOS碎片</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-[post]">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/14/Xcode工程配置/" class="archive-article-date">
-  	<time datetime="2017-03-14T02:39:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/14/Xcode工程配置/">Xcode工程配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-[post]">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/14/单例/" class="archive-article-date">
-  	<time datetime="2017-03-14T02:30:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/14/单例/">单例</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-[post]">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/14/UIDynamic物理引擎/" class="archive-article-date">
-  	<time datetime="2017-03-14T01:43:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/14/UIDynamic物理引擎/">UIDynamic物理引擎</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-[post]">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/10/隐藏文件/" class="archive-article-date">
-  	<time datetime="2017-03-10T09:28:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/10/隐藏文件/">隐藏文件</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">其他</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-[post]">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/10/UIScrollView/" class="archive-article-date">
-  	<time datetime="2017-03-10T08:01:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/10/UIScrollView/">UIScrollView</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-[post]">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/10/UIButton/" class="archive-article-date">
-  	<time datetime="2017-03-10T07:09:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/10/UIButton/">UIButton</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-[post]">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/10/UITableView/" class="archive-article-date">
-  	<time datetime="2017-03-10T06:56:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/10/UITableView/">UITableView</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/4/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -566,8 +355,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

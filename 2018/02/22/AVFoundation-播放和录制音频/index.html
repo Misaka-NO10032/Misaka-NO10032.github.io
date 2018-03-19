@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Misaka-NO10032.github.io">
-  <title>Misaka&#39;s Blog</title>
+  <title>AVFoundation-播放和录制音频 | Misaka&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="倾尽所有，只求无悔!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Misaka&#39;s Blog">
-<meta property="og:url" content="https://Misaka-NO10032.github.io/index.html">
+  <meta name="description" content="音频会话音频会话在应用程序和操作系统之间扮演者中间人的角色。默认音频会话来自于以下一些预配置：  激活了音频播放，但是音频录制未激活 当用户切换响铃/静音开关到“静音”模式时，应用程序播放的所有音频都会消失 当设备显示解锁屏幕时，应用程序的音频处于静音状态 当应用程序播放音频时，所有后台播放的音频都会处于静音状态对于一些实际需求，我们可以通过“分类”来自定义">
+<meta name="keywords" content="iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AVFoundation-播放和录制音频">
+<meta property="og:url" content="https://Misaka-NO10032.github.io/2018/02/22/AVFoundation-播放和录制音频/index.html">
 <meta property="og:site_name" content="Misaka&#39;s Blog">
-<meta property="og:description" content="倾尽所有，只求无悔!">
+<meta property="og:description" content="音频会话音频会话在应用程序和操作系统之间扮演者中间人的角色。默认音频会话来自于以下一些预配置：  激活了音频播放，但是音频录制未激活 当用户切换响铃/静音开关到“静音”模式时，应用程序播放的所有音频都会消失 当设备显示解锁屏幕时，应用程序的音频处于静音状态 当应用程序播放音频时，所有后台播放的音频都会处于静音状态对于一些实际需求，我们可以通过“分类”来自定义">
+<meta property="og:updated_time" content="2018-02-25T02:16:09.838Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Misaka&#39;s Blog">
-<meta name="twitter:description" content="倾尽所有，只求无悔!">
+<meta name="twitter:title" content="AVFoundation-播放和录制音频">
+<meta name="twitter:description" content="音频会话音频会话在应用程序和操作系统之间扮演者中间人的角色。默认音频会话来自于以下一些预配置：  激活了音频播放，但是音频录制未激活 当用户切换响铃/静音开关到“静音”模式时，应用程序播放的所有音频都会消失 当设备显示解锁屏幕时，应用程序的音频处于静音状态 当应用程序播放音频时，所有后台播放的音频都会处于静音状态对于一些实际需求，我们可以通过“分类”来自定义">
   
   
     <link rel="icon" href="/favicon.png">
@@ -144,16 +146,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="[post]-AVFoundation-播放和录制音频" class="article article-type-[post]  article-index" itemscope itemprop="blogPost">
+            <article id="[post]-AVFoundation-播放和录制音频" class="article article-type-[post] " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/22/AVFoundation-播放和录制音频/">AVFoundation-播放和录制音频</a>
+    <h1 class="article-title" itemprop="name">
+      AVFoundation-播放和录制音频
     </h1>
   
 
@@ -171,106 +171,138 @@
 <li>激活了音频播放，但是音频录制未激活</li>
 <li>当用户切换响铃/静音开关到“静音”模式时，应用程序播放的所有音频都会消失</li>
 <li>当设备显示解锁屏幕时，应用程序的音频处于静音状态</li>
-<li>当应用程序播放音频时，所有后台播放的音频都会处于静音状态<br>对于一些实际需求，我们可以通过“分类”来自定义
-        
-          <a class="article-more-a" href="/2018/02/22/AVFoundation-播放和录制音频/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/22/AVFoundation-播放和录制音频/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="[post]-AVFoundation入门" class="article article-type-[post]  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/21/AVFoundation入门/">AVFoundation入门</a>
-    </h1>
-  
-
-        
-        <a href="/2018/02/21/AVFoundation入门/" class="archive-article-date">
-  	<time datetime="2018-02-21T08:54:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>视频文件基础知识</strong></p>
-<ul>
-<li>FPS：视频的帧率，指视频文件一秒钟内所能展示的帧数。常见的帧率有24FPS、25FPS和30FPS。</li>
-<li>视频有许多通用尺寸，常见的是16:9，即每16个水平像素对应9个垂直像素，在这一宽高比之下常见的视频尺寸是1280x720和1920x1080.如果每一个像素点使用8位的RGB色彩空间，就意味着红色占8位，绿色占8位，蓝色占8位，下表展示了未压缩视频在30FPS帧率的情况下，需要的存储空间。</li>
+<li>当应用程序播放音频时，所有后台播放的音频都会处于静音状态<br>对于一些实际需求，我们可以通过“分类”来自定义<a id="more"></a>
+</li>
 </ul>
-<table>
+<h2 id="音频会话分类"><a href="#音频会话分类" class="headerlink" title="音频会话分类"></a>音频会话分类</h2><table>
 <thead>
 <tr>
-<th style="text-align:center">颜色</th>
-<th style="text-align:center">分辨率</th>
-<th style="text-align:center">帧率</th>
-<th style="text-align:center">MB/s</th>
-<th style="text-align:center">GB/h</th>
+<th style="text-align:center">分类</th>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">是否允许混音</th>
+<th style="text-align:center">音频输入</th>
+<th style="text-align:center">音频输出</th>
+<th style="text-align:center">是否受静音/锁屏控制</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">24位</td>
-<td style="text-align:center">1280x720</td>
-<td style="text-align:center">30FPS</td>
-<td style="text-align:center">79MB/s</td>
-<td style="text-align:center">278GB/h</td>
+<td style="text-align:center">Ambient (AVAudioSessionCategoryAmbient)</td>
+<td style="text-align:center">游戏、效率应用程序</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">是</td>
+<td style="text-align:center">是</td>
 </tr>
 <tr>
-<td style="text-align:center">24位</td>
-<td style="text-align:center">1920x1080</td>
-<td style="text-align:center">30FPS</td>
-<td style="text-align:center">178MB/s</td>
-<td style="text-align:center">625GB/h</td>
+<td style="text-align:center">Solo Ambient（默认） (AVAudioSessionCategorySoloAmbient)</td>
+<td style="text-align:center">游戏、效率应用程序</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">是</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">Playback (AVAudioSessionCategoryPlayback)</td>
+<td style="text-align:center">音频和视频播放器</td>
+<td style="text-align:center">可选</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">是</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Record (AVAudioSessionCategoryRecord)</td>
+<td style="text-align:center">录音机、音频捕捉</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">是</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Play and Record (AVAudioSessionCategoryPlayAndRecord)</td>
+<td style="text-align:center">VoIP、语音聊天</td>
+<td style="text-align:center">可选</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Audio Processing (AVAudioSessionCategoryAudioProcessing)</td>
+<td style="text-align:center">离线会话和处理</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Multi-Route (AVAudioSessionCategoryMultiRoute)</td>
+<td style="text-align:center">使用外部硬件的高级A/V应用程序</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">是</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center"></td>
 </tr>
 </tbody>
 </table>
-<p>由此可见，在当前阶段未压缩的视频传输是不可取的，于是我们需要压缩技术。</p>
-        
-          <a class="article-more-a" href="/2018/02/21/AVFoundation入门/#more">more >></a>
-        
+<p>上述分类提供的几种常见行为可以满足大部分的应用程序需要，如有需要更加复杂的功能，其中一些分类可以通过使用options和modes方法进一步自定义开发。<strong>options</strong>可以让开发者使用一些附加行为，如使用Playback分类后，应用程序允许将输出音频和背景声音进行混合。<strong>modes</strong>可以通过引入被定制的行为进一步对分类进行修改以满足一些特殊的需求。</p>
+<h2 id="配置音频会话"><a href="#配置音频会话" class="headerlink" title="配置音频会话"></a>配置音频会话</h2><p>音频会话在应用程序的生命周期中是可以改的，但通常我们只需要在程序启动时配置一次就好<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions &#123;</div><div class="line">//配置音频会话</div><div class="line">    AVAudioSession *session = [AVAudioSession sharedInstance];</div><div class="line">    NSError *error;</div><div class="line">    //设置音频会话类型</div><div class="line">    if (![session setCategory:AVAudioSessionCategoryPlayback error:&amp;error]) &#123;</div><div class="line">        //错误处理</div><div class="line">        NSLog(@&quot;Category Error: %@&quot;, [error localizedDescription]);</div><div class="line">    &#125;</div><div class="line">    //激活会话</div><div class="line">    if (![session setActive:YES error:&amp;error]) &#123;</div><div class="line">        //错误处理</div><div class="line">        NSLog(@&quot;Activation Error: %@&quot;, [error localizedDescription]);</div><div class="line">    &#125;</div><div class="line">    return YES;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>AVAudioSession提供了与应用程序音频会话交互的接口，所以开发者需要取得指向该单例的指针。通过设置合适的分类，开发者可以为音频的播放指定需要的音频会话，其中定制一些行为。最后告知该音频会话激活该配置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">后台播放配置：info -&gt; 添加 Required background modes（Array）-&gt; 添加 App plays audio or streams audio/video using AirPlay</div></pre></td></tr></table></figure></p>
+<h1 id="使用AVAudioPlayer播放音频"><a href="#使用AVAudioPlayer播放音频" class="headerlink" title="使用AVAudioPlayer播放音频"></a>使用AVAudioPlayer播放音频</h1><hr>
+<p>AVAudioPlayer类的实例提供了一种简单的从文本或内存中播放音频的方法。</p>
+<blockquote>
+<p>注意：不支持网络流播放</p>
+</blockquote>
+<h2 id="创建AVAudioPlayer"><a href="#创建AVAudioPlayer" class="headerlink" title="创建AVAudioPlayer"></a>创建AVAudioPlayer</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@&quot;rock&quot;</div><div class="line">                                             withExtension:@&quot;mp3&quot;];</div><div class="line">NSError *error;</div><div class="line">//通过本地音频的url创建</div><div class="line">AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL</div><div class="line">                                                               error:&amp;error];</div><div class="line">//通过本地音频的data创建</div><div class="line">AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithData:rockData error:&amp;error];</div><div class="line">if (player) &#123;</div><div class="line">    player.numberOfLoops = -1; // 循环次数，-1无限循环</div><div class="line">    player.enableRate = YES;//是否能修改播放速率</div><div class="line">    player.rate = 1.0;//播放速率</div><div class="line">    [player prepareToPlay];</div><div class="line">&#125; else &#123;</div><div class="line">    NSLog(@&quot;Error creating player: %@&quot;, [error localizedDescription]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>调用prepareToPlay方法可以将音频预加载到缓冲区。当调用play方法时该方法会隐性调用，不过在创建AVAudioPlayer时调用可以降低调用play方法和听到声音输出之间的延时。</p>
+<h2 id="对播放进行控制"><a href="#对播放进行控制" class="headerlink" title="对播放进行控制"></a>对播放进行控制</h2><p><strong>方法</strong></p>
+<ul>
+<li><strong>play：</strong>播放</li>
+<li><strong>pause：</strong>暂停</li>
+<li><strong>stop：</strong>停止<blockquote>
+<p>pause、stop都会停止播放，当调用play时停止的音频也都会继续播放，两者的作用从应用程序外看来是一样的，但是主要区别在底层处理上。<strong>区别在于</strong>，stop会撤销调用prepareToPlay时所作的设置，而pause并不会。</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>属性</strong></p>
+<ul>
+<li><strong>volume：</strong>音量0.0～1.0</li>
+<li><strong>pan：</strong>允许使用立体声播放声音-1.0（极左）～1.0（极右），默认值0.0（居中）</li>
+<li><strong>rate：</strong>播放速率0.5～2.0</li>
+<li><strong>numberOfLoops：</strong>循环播放，-1无限循环<br><strong>多个播放器实例同步</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">- (void)play &#123;</div><div class="line">    if (!self.playing) &#123;</div><div class="line">        NSTimeInterval delayTime = [self.players[0] deviceCurrentTime] + 0.01;</div><div class="line">        for (AVAudioPlayer *player in self.players) &#123;</div><div class="line">            [player playAtTime:delayTime];</div><div class="line">        &#125;</div><div class="line">        self.playing = YES;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+要对多个播放器实例进行同步，需要先捕捉当前设备时间并添加一个小延时，这样就会具有一个从开始播放时间计算的参照时间。通过每个实例调用playAtTime方法并传递延时参照时间，遍历播放器数组并开始播放。这样就保证了这些播放器在音频播放时始终保持紧密同步。</li>
+</ul>
+<h2 id="处理中断事件"><a href="#处理中断事件" class="headerlink" title="处理中断事件"></a>处理中断事件</h2><p>iPhone上应用程序运行过程中，可能会遇上中断事件，如电话呼入等。<br><strong>注册中断通知</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">NSNotificationCenter *nsnc = [NSNotificationCenter defaultCenter];</div><div class="line">[nsnc addObserver:self</div><div class="line">         selector:@selector(handleInterruption:)</div><div class="line">             name:AVAudioSessionInterruptionNotification</div><div class="line">           object:[AVAudioSession sharedInstance]];</div><div class="line">//AVAudioSessionInterruptionNotification 中断通知</div><div class="line">//注销通知</div><div class="line">- (void)dealloc &#123;</div><div class="line">    [[NSNotificationCenter defaultCenter] removeObserver:self];</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><strong>中断处理</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">- (void)handleInterruption:(NSNotification *)notification &#123;</div><div class="line">    NSDictionary *info = notification.userInfo;</div><div class="line">    AVAudioSessionInterruptionType type = [info[AVAudioSessionInterruptionTypeKey] unsignedIntegerValue];</div><div class="line">    if (type == AVAudioSessionInterruptionTypeBegan) &#123;</div><div class="line">        //AVAudioSessionInterruptionTypeBegan</div><div class="line">        //中断开始的后续自定义操作</div><div class="line">        [self stop];</div><div class="line">        if (self.delegate) &#123;</div><div class="line">            [self.delegate playbackStopped];</div><div class="line">        &#125;</div><div class="line">    &#125;else &#123;</div><div class="line">        //AVAudioSessionInterruptionTypeEnded</div><div class="line">        //中断结束后的后续自定义操作</div><div class="line">        AVAudioSessionInterruptionOptions options = [info[AVAudioSessionInterruptionOptionKey] unsignedIntegerValue];</div><div class="line">        if (options == AVAudioSessionInterruptionOptionShouldResume) &#123;</div><div class="line">            //中断结束，可以恢复播放</div><div class="line">            [self play];</div><div class="line">            if (self.delegate) &#123;</div><div class="line">                [self.delegate playbackBegan];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="对线路改变的响应"><a href="#对线路改变的响应" class="headerlink" title="对线路改变的响应"></a>对线路改变的响应</h2><p>在iOS设备上添加或移除音频输入、输出线路时，会发生线路改变。<br><strong>注册线路变化通知</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//注册通知，接收AVAudioSessionRouteChangeNotification，处理线路变更</div><div class="line">NSNotificationCenter *nsnc = [NSNotificationCenter defaultCenter];</div><div class="line">[nsnc addObserver:self</div><div class="line">         selector:@selector(handleRouteChange:)</div><div class="line">             name:AVAudioSessionRouteChangeNotification</div><div class="line">           object:[AVAudioSession sharedInstance]];</div><div class="line">//注销通知</div><div class="line">- (void)dealloc &#123;</div><div class="line">    [[NSNotificationCenter defaultCenter] removeObserver:self];</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><strong>判断通知原因并进行处理</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">- (void)handleRouteChange:(NSNotification *)notification &#123;</div><div class="line">    NSDictionary *info = notification.userInfo;</div><div class="line">    AVAudioSessionRouteChangeReason reason =</div><div class="line">        [info[AVAudioSessionRouteChangeReasonKey] unsignedIntValue];</div><div class="line">    if (reason == AVAudioSessionRouteChangeReasonOldDeviceUnavailable) &#123;</div><div class="line">        AVAudioSessionRouteDescription *previousRoute =</div><div class="line">            info[AVAudioSessionRouteChangePreviousRouteKey];</div><div class="line">        AVAudioSessionPortDescription *previousOutput = previousRoute.outputs[0];</div><div class="line">        NSString *portType = previousOutput.portType;</div><div class="line">        if ([portType isEqualToString:AVAudioSessionPortHeadphones]) &#123;</div><div class="line">        //判断时耳机断开后，进行操作</div><div class="line">            [self stop];</div><div class="line">            [self.delegate playbackStopped];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>在收到设备断开连接的通知后，需要向userInfo字典提出请求，以获得其中用于描述前一个线路的AVAudioSessionRouteDescrription。线路的描述信息整合在一个输入NSArray和一个输出NSArray中。数组中的元素都是AVAudioSessionPortDescrription的实例，用于描述不同的I/O接口属性。从线路描述中找出第一个输出接口并判断其是否为耳机接口。如果是，则停止播放。这样当我们断开耳机后，音频播放就会如期望般停止。</p>
+<h1 id="使用AVAudioRecorder录制音频"><a href="#使用AVAudioRecorder录制音频" class="headerlink" title="使用AVAudioRecorder录制音频"></a>使用AVAudioRecorder录制音频</h1><h2 id="创建AVAudioRecorder"><a href="#创建AVAudioRecorder" class="headerlink" title="创建AVAudioRecorder"></a>创建AVAudioRecorder</h2><p>创建AVAudioRecorder实例时要提供一些信息，分别是：</p>
+<ul>
+<li>用于表示音频流写入文件的本地文件URL</li>
+<li>包含用于配制录音会话键值信息的NSDictionary对象</li>
+<li>用于捕捉初始化阶段各种错误的NSError指针<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">NSString *tmpDir = NSTemporaryDirectory();</div><div class="line">NSString *filePath = [tmpDir stringByAppendingPathComponent:@&quot;memo.caf&quot;];</div><div class="line">NSURL *fileURL = [NSURL fileURLWithPath:filePath];</div><div class="line"></div><div class="line">NSDictionary *settings = @&#123;</div><div class="line">                           AVFormatIDKey : @(kAudioFormatAppleIMA4),</div><div class="line">                           AVSampleRateKey : @44100.0f,</div><div class="line">                           AVNumberOfChannelsKey : @1,</div><div class="line">                           AVEncoderBitDepthHintKey : @16,</div><div class="line">                           AVEncoderAudioQualityKey : @(AVAudioQualityMedium)</div><div class="line">                           &#125;;</div><div class="line"></div><div class="line">NSError *error;</div><div class="line">self.recorder = [[AVAudioRecorder alloc] initWithURL:fileURL settings:settings error:&amp;error];</div><div class="line">if (self.recorder) &#123;</div><div class="line">    self.recorder.delegate = self;</div><div class="line">    self.recorder.meteringEnabled = YES;</div><div class="line">    [self.recorder prepareToRecord];</div><div class="line">&#125; else &#123;</div><div class="line">    NSLog(@&quot;Error: %@&quot;, [error localizedDescription]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+prepareToRecord方法同AVAudioPlayer的该方法，在创建时调用可以将录制启动时间的延时降到最小。<br>设置字典的指定键值信息，在<avfoundation avaudiosettings.h="">有完整的定义。下面介绍一些通用的键值<br><strong>音频格式</strong><br>AVFormatIDKey定义了写入内容的音频格式，下面的常量都是常用的音频格式所支持的值：</avfoundation></li>
+<li>kAudioFormatLinearPCM</li>
+<li>kAudioFormatMPEG4AAC</li>
+<li>kAudioFormatAppleLossless</li>
+<li>kAudioFormatAppleIMA4</li>
+<li>kAudioFormatiLBC</li>
+<li>kAudioFormatULaw<br>kAudioFormatLinearPCM会将未压缩的音频流写入到文件中，保真最高，相应的文件也最大。kAudioFormatMPEG4AAC或kAudioFormatAppleIMA4的压缩格式会显著缩小文件，还能保证高质量的音频内容。<blockquote>
+<p>注意：指定的音频格式一定要和URL参数定义的文件类型兼容。.caf通常是最好的容器格式，因为它和内容无关并可以保存Core Audio支持的任何音频格式。</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>采样率</strong><br>AVSampleRateKey用于定义录音器的采样率。采样率定义了对输入的模拟音频信号每一秒内的采样率。在录制音频的质量及最终的文件大小方面，采样率扮演着至关重要的角色。使用低采样率，比如8kHz，会导致粗粒度、AM广播类型的录制效果，不过文件会比较小；使用44.1kHz的采样率（CD质量的采样率）会得到非常高质量的内容，不过文件就比较大。对于使用什么采样率最好没有一个明确的定义，不过开发者应该尽量使用标准的采样率，比如8000，16000，22050或44100.最终是我们的耳朵在进行判断。<br><strong>通道数</strong><br>AVNumberOfChannelsKey用于定义记录音频内容的通道数。指定默认值为1意味着使用单声道录制，设置为2意味着使用立体声录制。除非使用外部硬件进行录制，否则通常应该创建单声道录音。</p>
+<h2 id="控制录音过程"><a href="#控制录音过程" class="headerlink" title="控制录音过程"></a>控制录音过程</h2><p>AVAudioRecorder包含一些方法可以支持无限时长的录制，比如在未来某一时间点开始录制或录制指定长度的内容等。开发者甚至可以暂停录制并在之后从这个停止的地方继续重启录制。<br><strong>方法</strong></p>
+<ul>
+<li><strong>record：</strong>录制</li>
+<li><strong>pause：</strong>暂停</li>
+<li><strong>stop：</strong>停止</li>
+<li><strong>保存录音内容</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">- (void)saveRecordingWithName:(NSString *)name completionHandler:(THRecordingSaveCompletionHandler)handler &#123;</div><div class="line"></div><div class="line">    NSTimeInterval timestamp = [NSDate timeIntervalSinceReferenceDate];</div><div class="line">    NSString *filename = [NSString stringWithFormat:@&quot;%@-%f.m4a&quot;, name, timestamp];</div><div class="line"></div><div class="line">    NSString *docsDir = [self documentsDirectory];</div><div class="line">    NSString *destPath = [docsDir stringByAppendingPathComponent:filename];</div><div class="line"></div><div class="line">    NSURL *srcURL = self.recorder.url;</div><div class="line">    NSURL *destURL = [NSURL fileURLWithPath:destPath];</div><div class="line"></div><div class="line">    NSError *error;</div><div class="line">    BOOL success = [[NSFileManager defaultManager] copyItemAtURL:srcURL toURL:destURL error:&amp;error];</div><div class="line">    if (success) &#123;</div><div class="line">        handler(YES, [THMemo memoWithTitle:name url:destURL]);</div><div class="line">        [self.recorder prepareToRecord];</div><div class="line">    &#125; else &#123;</div><div class="line">        handler(NO, error);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (NSString *)documentsDirectory &#123;</div><div class="line">    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);</div><div class="line">    return [paths objectAtIndex:0];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="使用Audio-Metering对音频进行测量"><a href="#使用Audio-Metering对音频进行测量" class="headerlink" title="使用Audio Metering对音频进行测量"></a>使用Audio Metering对音频进行测量</h1>AVAudioRecorder和AVAudioPlayer中最强大和实用的功能就是对音频进行测量。Audio Metering可以让开发者读取音频的平均分贝和峰值分贝，并使用这些数据以可视化方式将声音的大小呈现给用户。两个类都使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- (float)peakPowerForChannel:(NSUInteger)channelNumber; </div><div class="line">- (float)averagePowerForChannel:(NSUInteger)channelNumber;</div></pre></td></tr></table></figure>
+来获取峰值和均值。这个值的范围从0Db（最大分贝）到-160dB（最小分贝或静音）<blockquote>
+<p>在读取这些值之前，首先要设置<strong>meteringEnabled</strong>的属性为<strong>YES</strong>才可以支持对音频进行测量。每次需要读取值时，首先通过调用<strong>updateMeters</strong>方法才能获得最新的值。</p>
+</blockquote>
+</li>
+</ul>
+<p>关于声音计量展示需要注意的是，这么做会增加开销。启用计量功能会导致一些额外计算，会影响设备的耗电量。而且绘图展示用Quartz的话会占用CPU资源。所以如果要录制长时间的音频可以考虑仅用音频计量功能，或者选择更高效的绘制方法，比如使用OpenGL ES。</p>
+
       
 
       
@@ -292,18 +324,74 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/21/AVFoundation入门/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://Misaka-NO10032.github.io/2018/02/22/AVFoundation-播放和录制音频/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/02/21/AVFoundation入门/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">AVFoundation入门</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -311,538 +399,10 @@
 
 
   
-    <article id="[post]-正则表达式" class="article article-type-[post]  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/10/正则表达式/">正则表达式</a>
-    </h1>
+    <div class="duoshuo"></div>
   
 
-        
-        <a href="/2018/01/10/正则表达式/" class="archive-article-date">
-  	<time datetime="2018-01-10T03:02:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://www.runoob.com/regexp/regexp-tutorial.html" target="_blank" rel="external">正则表达式</a></p>
-<p>正则表达式(Regular Expression)是一种文本模式，包括<strong>普通字符</strong>（例如，a 到 z 之间的字母）和<strong>特殊字符</strong>（称为”元字符”）。<br>正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串。<br>
-        
-          <a class="article-more-a" href="/2018/01/10/正则表达式/#more">more >></a>
-        
-      
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/10/正则表达式/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-UICollectionView及自定义布局" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/06/UICollectionView及自定义布局/">UICollectionView及自定义布局</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/06/UICollectionView及自定义布局/" class="archive-article-date">
-  	<time datetime="2017-08-06T05:53:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>UICollectionView继承自UIScrollView,系统提供UICollectionViewFlowLayout流水布局(支持横／纵向滚动),此外可以根据需求自定义布局。<br>
-        
-          <a class="article-more-a" href="/2017/08/06/UICollectionView及自定义布局/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/06/UICollectionView及自定义布局/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-NSPredicate筛选" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/04/NSPredicate筛选/">NSPredicate筛选</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/04/NSPredicate筛选/" class="archive-article-date">
-  	<time datetime="2017-08-04T02:53:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>NSPredicate,用于定义一个筛选条件，对集合进行筛选</p>
-<ul>
-<li>占位符<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">%K  用于动态传入属性名</div><div class="line">%@  用于动态设置属性值</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/08/04/NSPredicate筛选/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/04/NSPredicate筛选/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="[post]-Python定义类" class="article article-type-[post]  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/12/Python定义类/">Python定义类</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/12/Python定义类/" class="archive-article-date">
-  	<time datetime="2017-06-12T06:19:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<ul>
-<li>定义类<br>在Python中，类通过 class 关键字定义。以 Person 为例，定义一个Person类如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">class Person(object):</div><div class="line">    pass </div><div class="line">    #pass是空语句，是为了保持程序结构的完整性.pass 不做任何事情，一般用做占位语句。</div><div class="line">按照 Python 的编程习惯，类名以大写字母开头，紧接着是(object)，表示该类是从哪个类继承下来的。</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/06/12/Python定义类/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/12/Python定义类/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="[post]-Python进阶二" class="article article-type-[post]  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/12/Python进阶二/">Python(2.7.10)进阶二</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/12/Python进阶二/" class="archive-article-date">
-  	<time datetime="2017-06-12T05:42:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<ul>
-<li>模块导入<br>要使用一个模块，我们必须首先导入该模块。Python使用import语句导入一个模块。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">例如，导入系统自带的模块 math：</div><div class="line">import math</div><div class="line">你可以认为math就是一个指向已导入模块的变量，通过该变量，我们可以访问math模块中所定义的所有公开的函数、变量和类：</div><div class="line">&gt;&gt;&gt; math.pow(2, 0.5) # pow是函数</div><div class="line">1.4142135623730951</div><div class="line"></div><div class="line">&gt;&gt;&gt; math.pi # pi是变量</div><div class="line">3.141592653589793</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/06/12/Python进阶二/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/12/Python进阶二/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="[post]-Python进阶" class="article article-type-[post]  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/07/Python进阶/">Python(2.7.10)进阶</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/07/Python进阶/" class="archive-article-date">
-  	<time datetime="2017-06-07T08:29:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<ul>
-<li>python函数<br>可以把函数作为参数<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; def add(x, y, f):</div><div class="line">...     return f(x)+f(y)</div><div class="line">...</div><div class="line">&gt;&gt;&gt; add(-5, 9, abs)</div><div class="line">14</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/06/07/Python进阶/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/07/Python进阶/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="[post]-Python基础二" class="article article-type-[post]  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/07/Python基础二/">Python(2.7.10)基础二</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/07/Python基础二/" class="archive-article-date">
-  	<time datetime="2017-06-07T04:05:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<ul>
-<li>迭代<br>Python中，迭代永远是取出元素本身，而非元素的索引。
-        
-          <a class="article-more-a" href="/2017/06/07/Python基础二/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/07/Python基础二/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="[post]-python基础" class="article article-type-[post]  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/07/python基础/">Python(2.7.10)基础</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/07/python基础/" class="archive-article-date">
-  	<time datetime="2017-06-07T01:03:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<ul>
-<li>Python注意事项：<br>1.Python区分大小写，<br>2.Python代码有缩进规则.具有相同缩进的代码被视为代码块.Python的习惯写法：4个空格，不要使用Tab，更不要混合Tab和空格，否则很容易造成因为缩进引起的语法错误。<br>3.注释用”#”<br>4.变量名：大小写英文，数字，下划线，数字不能开头
-        
-          <a class="article-more-a" href="/2017/06/07/python基础/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/07/python基础/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -864,8 +424,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
